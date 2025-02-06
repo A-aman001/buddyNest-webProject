@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fdf6e3;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8d7a2;
+            padding: 10px;
+        }
+        .logo {
+            width: 50px;
+        }
+        .banner {
+            width: 100%;
+            text-align: center;
+        }
+        .banner-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .hero {
+            background-color: #FCE9CC;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            background-color: #A8DADC;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content img {
+            width: 200px;
+            border-radius: 10px;
+        }
+        .button {
+            background-color: #F4A261;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer.main-footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            background-color: #FFF7F7;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+        footer.main-footer div {
+            margin: 10px;
+            text-align: left;
+        }
+        footer.main-footer h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        footer.main-footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        footer.main-footer a {
+            text-decoration: none;
+            color: #5a5a5a;
+            font-size: 0.9rem;
+        }
+        footer.main-footer .social-media img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
+
+        footer#bottom-footer {
+          background-color: #FFD38A;
+          text-align: center;
+          padding: 10px 0;
+          font-size: 0.9rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            footer.main-footer {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+            footer.main-footer div {
+              margin-bottom: 20px;
+            }
+            footer.main-footer .social-media img {
+              margin: 5px;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <header>
+            <div class="top-bar">
+                <div class="logo-container">
+                    <img src="img/โลโก้-1.png" alt="BuddyNest Logo" class="logo">
+                </div>
+                <div class="auth-buttons">
+                    <a href="Homepage.html">หน้าหลัก</a>
+                    <a href="Mybooking-1.html">การจองของฉัน</a>
+                    <a href="sign-in.html"><button>Sign-in</button></a>
+                    <a href="Registration.html"><button>Register</button></a>
+                </div>
+            </div>
+        
+        <div class="banner">
+            <img src="img/แบนเนอร์.png" alt="BuddyNest Banner" class="banner-image">
+        </div>
+    </header>
+    
+    <div class="content">
+        <img src="img/ร้าน-5.png" alt="Kimfam Grooming">
+        <h2>ไขลาน</h2>
+        <p><strong>ที่อยู่:</strong> 123/4 ถนนพหลโยธิน ตำบลเวียง อำเภอเมืองพะเยา จังหวัดพะเยา 56000<br>
+            <strong>เบอร์โทร:</strong> 098-765-4321
+            <strong>เวลาทำการ:</strong> ทุกวัน 09:00 - 18:00 น.<br> 
+        </p>
+        <p><strong>บริการและราคา:</strong></p>
+        <p>
+            แมว 1-4 เดือน: ขนสั้น 80.-/99.- | ขนยาว 90.-/109.-<br> 
+            แมวโต: ขนสั้น 110.-/129.- | ขนยาว 130.-/149.-<br> 
+            หยอดไรหู 20.- | หยอดเห็บหมัด 50.- (พร้อมการ์ด) | ตัดขนอุ้งเท้า 20.-<br> 
+        </p>
+        <a href="Payment-5.html"><button class="button">จอง</button></a>
+    </div>   
+        
+        
+    <footer class="main-footer">
+        <div class="team">
+            <h3>Team</h3>
+            <p>Hataichanok Tanaskul</p>
+            <p>Amaraporn Onkoksung</p>
+            <p>Achiraya Kewwanya</p>
+            <p>Aman Alikae</p>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Email: buddy.nest@up.ac.th</p>
+            <p>Phone Number: (+66)12-3456789</p>
+            <p>Address: 19 ตำบลเมือง อำเภอเมืองพะเยา พะเยา 56000</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="img/fb.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="img/ig.png" alt="Instagram Logo">
+            </a>
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                <img src="img/x.png" alt="Twitter Logo">
+            </a>
+        </div>
+        <div class="about">
+            <h3>About Us</h3>
+            <p><a href="Homepage.html">หน้าหลัก</a></p>
+            <p><a href="GrabPet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
+            <p><a href="Pet Care.html">บริการกรูมมิ่ง</a></p>
+            <p><a href="Mybooking-1.html">การจองของฉัน</a></p>
+        </div>
+    </footer>
+
+    <footer id="bottom-footer">
+        <p>© 2025 Buddy Nest. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
