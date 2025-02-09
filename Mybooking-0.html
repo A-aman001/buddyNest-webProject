@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/โลโก้-2.png" type="image/icon type">
-    <title>การจองของฉัน</title>
+    <link rel="icon" href="img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+    <title>Buddy Nest - การจองของฉัน</title>
     <style>
         * {
             margin: 0;
@@ -14,15 +14,15 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
+            background-color: #EA73D3;
+            color: #210000;
         }
-        .logo {
-            width: 50px;
+            .logo {
+            width: 100px;
         }
-        
+
         header {
-            background-color: #d88fd8;
+            background-color: #FFE0AD;
             padding: 1rem;
             display: flex;
             justify-content: space-between;
@@ -34,7 +34,7 @@
             gap: 1.5rem;
         }
 
-        header .nav a, header .auth-buttons a {
+        header .nav a {
             text-decoration: none;
             color: black;
             font-weight: bold;
@@ -46,6 +46,12 @@
             gap: 1.5rem;
         }
 
+        header .auth-buttons a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
         header .auth-buttons button {
             background-color: #e2f5f5;
             border: 1px solid #ccc;
@@ -54,7 +60,12 @@
             cursor: pointer;
             font-size: 0.9rem;
         }
-
+        
+        main {
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
         nav {
             display: flex;
             justify-content: center;
@@ -79,12 +90,6 @@
             text-decoration: none;
             color: inherit;
             display: block;
-        }
-        
-        main {
-            text-align: center;
-            margin: 2rem auto;
-            max-width: 600px;
         }
 
         .booking-details {

@@ -3,24 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/โลโก้-2.png" type="image/icon type">
-    <title>Checkout Page</title>
+    <link rel="icon" href="img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+    <title>Buddy Nest - Checkout Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .top-bar {
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EA73D3;
+            color: #210000;
+        }
+            .logo {
+            width: 100px;
+        }
+
+        header {
+            background-color: #FFE0AD;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #f8d7a2;
-            padding: 10px;
         }
-        .logo {
-            width: 50px;
+
+        header .nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        header .nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header .auth-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        header .auth-buttons a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header .auth-buttons button {
+            background-color: #e2f5f5;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
         }
         .container {
             width: 80%;
@@ -175,20 +213,15 @@
 </head>
 <body>
     <header>
-        
-        <div class="top-bar">
-            <div class="logo-container">
-                <img src="img/โลโก้-2.png" alt="BuddyNest Logo" class="logo">
-            </div>
-            <div class="auth-buttons">
-                <a href="index.html">หน้าหลัก</a>
-                <a href="Mybooking-1.html">การจองของฉัน</a>
-                <a href="sign-in.html"><button>Sign-in</button></a>
-                <a href="Registration.html"><button>Register</button></a>
-            </div>
+        <div class="logo-container">
+            <img src="img/โลโก้-2.png" alt="BuddyNest Logo" class="logo">
         </div>
-        
-        
+        <div class="auth-buttons">
+            <a href="index.html">หน้าหลัก</a>
+            <a href="Mybooking-1.html">การจองของฉัน</a>
+            <a href="sign-in.html"><button>Sign-in</button></a>
+            <a href="Registration.html"><button>Register</button></a>
+        </div>
     </header>
     </div>
     <div class="container">
@@ -242,6 +275,7 @@
             <button id="pay-btn" class="pay-btn" disabled>ยืนยันการชำระเงิน</button>
         </div>
     </div>
+    <br><br>
     <footer class="main-footer">
         <div class="team">
             <h3>Team</h3>
