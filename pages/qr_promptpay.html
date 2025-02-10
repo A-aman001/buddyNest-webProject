@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" href="img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+
     <title>Buddy Nest - QR PromptPay</title>
+
     <style>
         * {
             margin: 0;
@@ -199,9 +202,9 @@
         </div>
         <div class="auth-buttons">
             <a href="index.html">หน้าหลัก</a>
-            <a href="Mybooking-1.html">การจองของฉัน</a>
-            <a href="sign-in.html"><button>Sign-in</button></a>
-            <a href="Registration.html"><button>Register</button></a>
+            <a href="/pages/my_booking/mybooking-1.html">การจองของฉัน</a>
+            <a href="/pages/sign-in.html"><button>Sign-in</button></a>
+            <a href="/pages/registration.html"><button>Register</button></a>
         </div>
     </header>
 
@@ -249,9 +252,9 @@
         <div class="about">
             <h3>About Us</h3>
             <p><a href="index.html">หน้าหลัก</a></p>
-            <p><a href="GrabPet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
-            <p><a href="Pet Care.html">บริการกรูมมิ่ง</a></p>
-            <p><a href="Mybooking-1.html">การจองของฉัน</a></p>
+            <p><a href="/pages/grab_pet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
+            <p><a href="/pages/pet_care.html">บริการกรูมมิ่ง</a></p>
+            <p><a href="/pages/my_booking/mybooking-1.html">การจองของฉัน</a></p>
         </div>
     </footer>
 
@@ -267,7 +270,7 @@
 
         function confirmPayment() {
             alert('การชำระเงินสำเร็จ!');
-            window.location.href = "Mybooking-0.html"; // เปลี่ยนหน้าไปยังหน้าการจอง
+            window.location.href = "pages/my_booking/mybooking-0.html"; // เปลี่ยนหน้าไปยังหน้าการจอง
         }
 
         // การจับเวลานับถอยหลัง
@@ -287,7 +290,7 @@
 
             if (countdownValue <= 0) {
                 clearInterval(countdownInterval);
-                window.location.href = "payment.html"; // เปลี่ยนหน้าไปยังหน้าชำระเงิน
+                window.location.href = "pages/payment/payment.html"; // เปลี่ยนหน้าไปยังหน้าชำระเงิน
             }
         }, 1000); // อัพเดตทุกๆ 1 วินาที
     </script>
