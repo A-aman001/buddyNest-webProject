@@ -92,6 +92,7 @@
                 width: 30%;
             }
         }
+        
     </style>
 </head>
 
@@ -225,10 +226,17 @@
                         <option value="แฮมสเตอร์">แฮมสเตอร์</option>
                     </select>
 
+                    <div>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date">
+                    </div>
+
                     <!-- Submit button -->
                     <div class="search-area-button">
                         <button onclick="searchServices()">ค้นหา</button>
                     </div>
+                </div>
+    
             </section>
 
             <div id="results" class="results">
@@ -301,30 +309,41 @@
 
     <script>
         const mockData = [
-            { province: "กรุงเทพมหานคร", petType: "สุนัข", service: "บริการกรูมมิ่งสำหรับสุนัขในกรุงเทพฯ" },
-            { province: "เชียงใหม่", petType: "แมว", service: "ฝากเลี้ยงแมวในเชียงใหม่" },
-            { province: "ภูเก็ต", petType: "กระต่าย", service: "ดูแลกระต่ายรายวันในภูเก็ต" },
-            { province: "ชลบุรี", petType: "แฮมสเตอร์", service: "บริการรับส่งแฮมสเตอร์ในชลบุรี" },
+            { province: "กรุงเทพมหานคร", petType: "สุนัข", date: "2025-02-12", service: "บริการกรูมมิ่งสำหรับสุนัขในกรุงเทพฯ" },
+            { province: "เชียงใหม่", petType: "แมว", date: "2025-02-13", service: "ฝากเลี้ยงแมวในเชียงใหม่" },
+            { province: "ภูเก็ต", petType: "กระต่าย", date: "2025-02-14", service: "ดูแลกระต่ายรายวันในภูเก็ต" },
+            { province: "ชลบุรี", petType: "แฮมสเตอร์", date: "2025-02-12", service: "บริการรับส่งแฮมสเตอร์ในชลบุรี" },
         ];
-
+    
+        // ฟังก์ชันแปลงวันที่ให้เป็นรูปแบบสวยงาม
+        const formatDate = (dateStr) => {
+            const months = [
+                "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+                "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+            ];
+            const [year, month, day] = dateStr.split("-");
+            return `${parseInt(day)} ${months[parseInt(month) - 1]} ${parseInt(year) + 543}`;
+        };
+    
         const searchServices = () => {
-            // Variables
-            const province = document.getElementById("province").value;
-            const petType = document.getElementById("pet-type").value;
+            const province = document.getElementById("province").value.trim();
+            const petType = document.getElementById("pet-type").value.trim();
+            const date = document.getElementById("date").value.trim();
             const resultsList = document.getElementById("resultsList");
             const resultsDiv = document.getElementById("results");
-
+    
             resultsList.innerHTML = "";
-
+    
             const filteredResults = mockData.filter(item =>
-                (!province || item.province === province) &&
-                (!petType || item.petType === petType)
+                (province === "" || item.province === province) &&
+                (petType === "" || item.petType === petType) &&
+                (date === "" || item.date === date)
             );
-
+    
             if (filteredResults.length > 0) {
                 filteredResults.forEach(item => {
                     const li = document.createElement("li");
-                    li.textContent = item.service;
+                    li.textContent = `${item.service} (วันที่: ${formatDate(item.date)})`;
                     resultsList.appendChild(li);
                 });
             } else {
@@ -332,9 +351,10 @@
                 li.textContent = "ไม่พบผลลัพธ์ที่ตรงกับการค้นหาของคุณ";
                 resultsList.appendChild(li);
             }
-
+    
             resultsDiv.style.display = "block";
-        }
+        };
+           
     </script>
 </body>
 
