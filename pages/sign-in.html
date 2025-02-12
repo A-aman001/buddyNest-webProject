@@ -16,7 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="../../assets/css/globals.css">
 
     <style>
         * {
@@ -136,6 +136,27 @@
             margin-bottom: 10px;
             text-align: center;
         }
+        .button-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px; /* เว้นระยะห่างระหว่างปุ่ม */
+        width: 100%;
+    }
+
+    .sign-in-button {
+        flex: 1; /* ให้ปุ่มขยายขนาดเท่ากัน */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .register-button {
+        background-color: #f4a261; /* สีของปุ่ม Register */
+    }
+
+    .register-button:hover {
+        background-color: #e76f51; /* เปลี่ยนสีเมื่อ hover */
+    }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -167,7 +188,11 @@
                     </button>
                 </div>
                 <a href="../../pages/forgot_your_password.html" class="forgot-password">Forget your password</a>
-                <button type="button" class="sign-in-button" onclick="handleSignIn()">Sign In</button>
+
+                <div class="button-group">
+                    <a href="../pages/registration.html" class="sign-in-button register-button">Register</a>
+                    <button type="button" class="sign-in-button" onclick="handleSignIn()">Sign In</button>
+                </div>
             </form>
         </div>
     </div>

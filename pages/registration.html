@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="../../assets/css/globals.css">
 
     <style>
         body {
@@ -171,71 +171,71 @@
                 <div class="container">
                     <!-- Username -->
                     <section class="form-group">
-                        <label for="username">ชื่อผู้ใช้</label>
-                        <input type="text" id="username" placeholder="ใส่ชื่อผู้ใช้" required>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" required>
                     </section>
 
                     <!-- Email -->
                     <section class="form-group">
-                        <label for="email">อีเมล</label>
+                        <label for="email">Email</label>
                         <input type="email" id="email" placeholder="example@email.com" required>
                     </section>
 
                     <!-- Password -->
                     <section class="form-group">
                         <div class="form-label">
-                            <label for="password">รหัสผ่าน</label>
+                            <label for="password">Password</label>
                             <span class="toggle-password" onclick="togglePassword('password', 'eye-icon-password')">
                                 <i id="eye-icon-password" class="fas fa-eye"></i>
                             </span>
                         </div>
-                        <input type="password" id="password" placeholder="สร้างรหัสผ่าน (ขั้นต่ำ 8 ตัว)" required>
+                        <input type="password" id="password" placeholder="Create a password (minimum 8 characters)" required>
                     </section>
 
                     <!-- Confirmp password -->
                     <section class="form-group">
                         <div class="form-label">
-                            <label for="confirm-password">ยืนยันรหัสผ่าน</label>
+                            <label for="confirm-password">Confirm Password</label>
                             <span class="toggle-password"
                                 onclick="togglePassword('confirm-password', 'eye-icon-confirm-password')">
                                 <i id="eye-icon-confirm-password" class="fas fa-eye"></i>
                             </span>
                         </div>
-                        <input type="password" id="confirm-password" placeholder="กรอกรหัสผ่านอีกครั้ง" required>
+                        <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
                     </section>
 
                     <!-- Phone and date of birth -->
                     <section class="form-group">
-                        <label for="phone">หมายเลขโทรศัพท์</label>
-                        <input type="tel" id="phone" placeholder="หมายเลขโทรศัพท์ของคุณ 123-456-7890" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Your phone number (123-456-7890)" required>
                     </section>
 
                     <!-- Date of birth -->
                     <section class="form-group">
-                        <label for="dob">วันเกิด</label>
+                        <label for="dob">Date of Birth</label>
                         <input type="date" id="dob" required>
                     </section>
 
                     <!-- Gender -->
                     <section class="form-group">
-                        <label>เพศ</label>
+                        <label>Gender</label>
                         <div class="gender-options">
                             <!-- Male -->
                             <div class="gender-input">
                                 <input type="radio" id="male" name="gender" value="male" required>
-                                <label for="male">ชาย</label>
+                                <label for="male">Male</label>
                             </div>
 
                             <!-- Female -->
                             <div class="gender-input">
                                 <input type="radio" id="female" name="gender" value="female">
-                                <label for="female">หญิง</label>
+                                <label for="female">Female</label>
                             </div>
 
                             <!-- Others -->
                             <div class="gender-input">
                                 <input type="radio" id="other" name="gender" value="other">
-                                <label for="other">อื่น ๆ</label>
+                                <label for="other">Other</label>
                             </div>
                         </div>
                     </section>
@@ -244,49 +244,50 @@
                     <section class="form-group">
                         <div class="form-inline">
                             <div>
-                                <label for="street">ที่อยู่ / บ้านเลขที่</label>
-                                <input type="text" id="street" placeholder="ระบุบ้านเลขที่" required>
+                                <label for="street">Address / House Number</label>
+                                <input type="text" id="street" placeholder="Enter house number" required>
                             </div>
                             <div>
-                                <label for="alley">ถนน / ซอย</label>
-                                <input type="text" id="alley" placeholder="ระบุถนน" required>
-                            </div>
-                        </div>
-                        <div class="form-inline">
-                            <div>
-                                <label for="subdistrict">ตำบล</label>
-                                <input type="text" id="subdistrict" placeholder="ระบุตำบล" required>
-                            </div>
-                            <div>
-                                <label for="district">อำเภอ</label>
-                                <input type="text" id="district" placeholder="ระบุอำเภอ" required>
+                                <label for="alley">Street / Alley</label>
+                                <input type="text" id="alley" placeholder="Enter street" required>
                             </div>
                         </div>
                         <div class="form-inline">
                             <div>
-                                <label for="province">จังหวัด</label>
-                                <input type="text" id="province" placeholder="ระบุจังหวัด" required>
+                                <label for="subdistrict">Subdistrict</label>
+                                <input type="text" id="subdistrict" placeholder="Enter subdistrict" required>
                             </div>
                             <div>
-                                <label for="postal-code">รหัสไปรษณีย์</label>
-                                <input type="text" id="postal-code" placeholder="เช่น: 94130" required>
+                                <label for="district">District</label>
+                                <input type="text" id="district" placeholder="Enter district" required>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div>
+                                <label for="province">Province</label>
+                                <input type="text" id="province" placeholder="Enter province" required>
+                            </div>
+                            <div>
+                                <label for="postal-code">Postal Code</label>
+                                <input type="text" id="postal-code" placeholder="e.g., 94130" required>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Terms -->
+                    <!-- Terms & Conditions -->
                     <section class="form-group terms">
-                        <label for="terms">เมื่อทำการลงทะเบียนแล้ว คุณยอมรับ
-                            <a href="#">ข้อกำหนดและเงื่อนไข</a> และ <a href="#">นโยบายความเป็นส่วนตัว</a>
-                        </label>
                         <input type="checkbox" id="terms" required>
+                        <label for="terms">By registering, you agree to the
+                            <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+                        </label>
                     </section>
 
                     <!-- Reset && submit button -->
                     <section class="actions">
-                        <button type="reset">รีเซ็ต</button>
-                        <button type="submit">ลงทะเบียน</button>
+                        <button type="reset">reset</button>
+                        <button type="submit">submit</button>
                     </section>
+            
                 </div>
             </form>
         </section>
