@@ -1,0 +1,29 @@
+.hero {
+    background-color: #FCE9CC;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.content {
+    background-color: #A8DADC;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content img {
+    width: 300px;
+    border-radius: 10px;
+}
+.button {
+    background-color: #F4A261;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
