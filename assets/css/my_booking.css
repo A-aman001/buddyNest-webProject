@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #EA73D3;
+    background-color: #FEFAF2;
     color: #210000;
 }
     .logo {
@@ -72,7 +72,7 @@ nav {
     justify-content: center;
     background-color: #f5d998;
     padding: 1rem 0;
-    border-bottom: 2px solid #d88fd8;
+    border-bottom: 2px solid #FEFAF2;
 }
 
 nav .tab {

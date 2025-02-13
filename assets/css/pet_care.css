@@ -1,29 +1,80 @@
-.hero {
-    background-color: #FCE9CC;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
-.content {
-    background-color: #A8DADC;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
+.content-container {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center; /* จัดเนื้อหาให้อยู่ตรงกลาง */
+    align-items: flex-start; /* จัดเนื้อหาให้อยู่ด้านบน */
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto; /* จัดให้อยู่ตรงกลาง */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* จำกัดความกว้างของ container */
 }
-.content img {
-    width: 300px;
+
+.image-section {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center; /* จัดรูปภาพให้อยู่ตรงกลาง */
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px; /* จำกัดความกว้างของรูปภาพ */
+    height: auto;
     border-radius: 10px;
 }
+
+.text-section {
+    flex: 2;
+    text-align: left; /* จัดข้อความให้ชิดซ้าย */
+}
+
+.text-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+.text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 10px 0; /* เพิ่มระยะห่างระหว่างย่อหน้า */
+}
+
+.text-section strong {
+    color: #333;
+}
+
+.text-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0; /* เพิ่มระยะห่าง */
+}
+
+.text-section ul li {
+    margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างรายการ */
+}
+
+.text-section ul ul {
+    margin-left: 20px;
+    list-style-type: disc; /* เพิ่ม bullet point สำหรับรายการย่อย */
+    margin-top: 5px; /* เพิ่มระยะห่างด้านบน */
+}
+
 .button {
-    background-color: #F4A261;
+    background-color: #ff6f61;
+    color: white;
     border: none;
     padding: 10px 20px;
-    color: white;
-    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    display: block; /* ทำให้ปุ่มอยู่ตรงกลาง */
+    margin: 20px auto; /* จัดปุ่มให้อยู่ตรงกลาง */
+    transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์ hover */
 }
+
+.button:hover {
+    background-color: #ff3b2f;
+}   
