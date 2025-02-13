@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
     <link rel="icon" href="img/โลโก้-2.png" type="image/icon type" sizes="16x16">
 
     <!-- Title -->
-    <title>Buddy Nest - Home page</title>
+    <title>BUDDYNEST - PET GROOMING & CARE</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/globals.css">
@@ -18,27 +17,67 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/search.css">
-
-    <style>
-        
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .card {
-            background-color: #f2f2f2;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 30%;
-        }
     
+    <style>
+        .pet-daycare {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .pet-daycare h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        .pet-daycare p {
+            font-size: 1.2em;
+            color: #777;
+        }
+        .locations {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            margin-top: 20px;
+        }
+        .location {
+            flex: 0 0 auto;
+            width: 45%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin-right: 10px;
+        }
+        .location img {
+            width: 50%;
+            border-radius: 10px;
+        }
+        .location h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .location p {
+            font-size: 1rem;
+            color: #777;
+        }
+        .location a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .carousel-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .carousel-controls button {
+            padding: 30px 50px;
+            margin: 5 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <nav>
@@ -189,19 +228,55 @@
         </div>
         
     </article>
+    <div class="pet-daycare">
 
-    <article class="cards">
-        <section class="card">
-            <img src="img/โลโก้-3.png" alt="Dog Bath" style="width: 100%; border-radius: 10px;">
-        </section>
-        <section class="card">
-            <img src="img/โลโก้-5.png" alt="Cat Care" style="width: 100%; border-radius: 10px;">
-        </section>
-        <section class="card">
-            <img src="img/โลโก้-4.png" alt="Pet Travel" style="width: 100%; border-radius: 10px;">
-        </section>
-    </article>
+        <div class="locations" id="carousel">
 
+            <div class="location">
+                <img src="img/ร้าน-6.png" alt="Grooming & Cattery">
+                <h3>ชื่อร้าน: PETORY</h3>
+                <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
+                <a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a>
+            </div>
+
+            <div class="location">
+                <img src="img/ร้าน-5.png" alt="PET DAYCARE">
+                <h3>ชื่อร้าน: ไขลาน</h3>
+                <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
+                <a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a>
+            </div>
+
+            <div class="location">
+                <img src="img/ร้าน-4.png" alt="PET DAYCARE">
+                <h3>ชื่อร้าน: Happy Pets</h3>
+                <p>เวลาทำการ: เปิดทุกวัน 08.00-18.00น.</p>
+                <a href="../../pages/pet_care/happypets.html">อ่านเพิ่มเติม</a>
+            </div>
+
+            <div class="location">
+                <img src="img/ร้าน-3.png" alt="PET DAYCARE">
+                <h3>ชื่อร้าน: Pet Paradise</h3>
+                <p>เวลาทำการ: เปิดทุกวัน 10.00-20.00น.</p>
+                <a href="../../pages/pet_care/petparadise.html">อ่านเพิ่มเติม</a>
+            </div>
+
+            <div class="location">
+                <img src="img/ร้าน-2.png" alt="PET DAYCARE">
+                <h3>ชื่อร้าน: Furry Friends</h3>
+                <p>เวลาทำการ: เปิดทุกวัน 09.00-17.00น.</p>
+                <a href="../../pages/pet_care/furryfriends.html">อ่านเพิ่มเติม</a>
+            </div>
+            
+            <div class="location">
+                <img src="img/ร้าน-1.png" alt="PET DAYCARE">
+                <h3>ชื่อร้าน: Paw Palace</h3>
+                <p>เวลาทำการ: เปิดทุกวัน 08.00-19.00น.</p>
+                <a href="../../pages/pet_care/pawpalace.html">อ่านเพิ่มเติม</a>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
     <footer class="main-footer">
         <article class="footer-container">
             <!-- Team -->
@@ -225,23 +300,23 @@
             <section class="social-media">
                 <h3>Follow Us</h3>
                 <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-                    <img src="img/fb.png" alt="Facebook Logo">
+                    <img src="../../img/fb.png" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                    <img src="img/ig.png" alt="Instagram Logo">
+                    <img src="../../img/ig.png" alt="Instagram Logo">
                 </a>
                 <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
-                    <img src="img/x.png" alt="Twitter Logo">
+                    <img src="../../img/x.png" alt="Twitter Logo">
                 </a>
             </section>
 
             <!-- About -->
             <section class="about">
                 <h3>About Us</h3>
-                <p><a href="index.html">หน้าหลัก</a></p>
-                <p><a href="pages/grab_pet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
-                <p><a href="pages/pet_care.html">บริการกรูมมิ่ง</a></p>
-                <p><a href="pages/my_booking/mybooking-1.html">การจองของฉัน</a></p>
+                <p><a href="../../index.html">หน้าหลัก</a></p>
+                <p><a href="../../pages/grab_pet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
+                <p><a href="../../pages/pet_care.html">บริการกรูมมิ่ง</a></p>
+                <p><a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a></p>
             </section>
         </article>
     </footer>
@@ -300,5 +375,4 @@
            
     </script>
 </body>
-
 </html>
