@@ -1,5 +1,5 @@
 # Buddy Nest 🐶🐱
-โปรเจครายวิชา requirement และ frontend development ของกลุ่มNoname!<br>
+โปรเจครายวิชา requirement และ frontend development ของกลุ่ม Noname!<br>
 สาขา วิศวกรรมซอฟต์แวร์ มหาวิทยาลัยพะเยา ปีการศึกษา 2567
 
 The project for the Requirement and Frontend Development course by the Noname! Group,<br>
