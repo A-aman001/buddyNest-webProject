@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEFAF2;
+    color: #210000;
+}
+    .logo {
+    width: 100px;
+}
+
+header {
+    background-color: #FFAEBC;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header .auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header .auth-buttons a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header .auth-buttons button {
+    background-color: #e2f5f5;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
