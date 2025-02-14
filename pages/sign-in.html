@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buddy Nest - Sign In</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+    <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon" sizes="16x16">
     <style>
         * {
             margin: 0;
@@ -14,7 +14,6 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
 
         body {
             display: flex;
@@ -35,7 +34,7 @@
             background-color: #fdeccb;
         }
 
-        .left-section .logo img {
+        .left-section img {
             height: 400px;
         }
 
@@ -48,9 +47,8 @@
             background-color: #ffffff;
         }
 
-        .right-section .sign-in-header img {
+        .right-section img {
             width: 200px;
-            height: auto;
             margin-bottom: 50px;
         }
 
@@ -59,12 +57,12 @@
             max-width: 500px;
         }
 
-        .sign-in-form .input-field {
-            margin-bottom: 15px;
+        .input-field {
             position: relative;
+            margin-bottom: 15px;
         }
 
-        .sign-in-form .input-field img {
+        .input-field img {
             position: absolute;
             top: 50%;
             left: 10px;
@@ -73,7 +71,7 @@
             height: 20px;
         }
 
-        .sign-in-form .input-field input {
+        .input-field input {
             width: 100%;
             padding: 10px 40px;
             border: 1px solid #ccc;
@@ -81,7 +79,7 @@
             font-size: 16px;
         }
 
-        .sign-in-form .input-field .toggle-password {
+        .toggle-password {
             position: absolute;
             top: 50%;
             right: 10px;
@@ -91,7 +89,7 @@
             cursor: pointer;
         }
 
-        .sign-in-form .forgot-password {
+        .forgot-password {
             display: block;
             margin-bottom: 20px;
             text-align: right;
@@ -100,23 +98,41 @@
             text-decoration: none;
         }
 
-        .sign-in-form .forgot-password:hover {
+        .forgot-password:hover {
             text-decoration: underline;
         }
 
-        .sign-in-form .sign-in-button {
-            width: 100%;
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .sign-in-button, .register-button {
+            flex: 1;
             padding: 10px;
-            background-color: #333333;
-            color: white;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
         }
 
-        .sign-in-form .sign-in-button:hover {
-            background-color: #555555;
+        .sign-in-button {
+            background-color: #333;
+            color: white;
+        }
+
+        .sign-in-button:hover {
+            background-color: #555;
+        }
+
+        .register-button {
+            background-color: #ffe8b2;
+            color: black;
+        }
+
+        .register-button:hover {
+            background-color: #ffdb87;
         }
 
         .error-message {
@@ -126,57 +142,51 @@
             text-align: center;
         }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
 
     <div class="signin-container">
         <div class="left-section">
-            <div class="logo">
-                <img src="../../img/โลโก้-1.png" alt="BuddyNest Logo">
-            </div>
+            <img src="../../img/โลโก้-1.png" alt="BuddyNest Logo">
         </div>
 
         <div class="right-section">
-            <div class="sign-in-header">
-                <img src="/img/sign-in.png" alt="Sign In Icon">
-            </div>
+            <img src="/img/sign-in.png" alt="Sign In Icon">
             <form class="sign-in-form" id="signinForm">
                 <div id="error-message" class="error-message"></div>
+                <p style="font-size: 1rem;">Sign In</p><br>
+
                 <div class="input-field">
                     <img src="/img/user.png" alt="Email Icon">
                     <input type="email" id="email" placeholder="Enter your email address" required>
                 </div>
+
                 <div class="input-field">
                     <img src="/img/password.png" alt="Password Icon">
-                    <input type="password" id="password" name="Password" placeholder="Enter your password" required>
+                    <input type="password" id="password" placeholder="Enter your password" required>
                     <button type="button" class="toggle-password" onclick="togglePassword()">
                         <i id="eye-icon" class="fas fa-eye"></i>
                     </button>
                 </div>
+
                 <a href="../../pages/forgot_your_password.html" class="forgot-password">Forget your password</a>
-                <button type="button" class="sign-in-button" onclick="handleSignIn()">Sign In</button>
+
+                <div class="button-container">
+                    <button type="button" class="register-button" onclick="goToRegister()">Register</button>
+                    <button type="button" class="sign-in-button" onclick="handleSignIn()">Sign In</button>
+                </div>
             </form>
         </div>
     </div>
-
 
     <script>
         function togglePassword() {
             const passwordField = document.getElementById('password');
             const eyeIcon = document.getElementById('eye-icon');
-            const passwordFieldType = passwordField.type;
-
-            if (passwordFieldType === 'password') {
-                passwordField.type = 'text';
-                eyeIcon.classList.remove('fa-eye');
-                eyeIcon.classList.add('fa-eye-slash');
-            } else {
-                passwordField.type = 'password';
-                eyeIcon.classList.remove('fa-eye-slash');
-                eyeIcon.classList.add('fa-eye');
-            }
+            passwordField.type = passwordField.type === 'password' ? 'text' : 'password';
+            eyeIcon.classList.toggle('fa-eye');
+            eyeIcon.classList.toggle('fa-eye-slash');
         }
 
         function handleSignIn() {
@@ -184,15 +194,19 @@
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('error-message');
 
-            if (email === '' || password === '') {
+            if (!email || !password) {
                 errorMessage.textContent = 'Please fill in both email and password!';
             } else {
                 errorMessage.textContent = '';
-                // นำทางไปยังหน้าหลัก (เปลี่ยน URL ตามต้องการ)
-                window.location.href = '../../index.html';  // ปรับ URL ให้ตรงกับหน้าหลักของคุณ
+                window.location.href = '../../index.html'; // เปลี่ยนเป็นหน้าหลักของคุณ
             }
         }
+
+        function goToRegister() {
+            window.location.href = '../../pages/registration.html'; // เปลี่ยนเป็นหน้าลงทะเบียนของคุณ
+        }
     </script>
+
 </body>
 
 </html>
