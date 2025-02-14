@@ -18,7 +18,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #EA73D3;
+            background-color: #B7EBEA;
             color: #210000;
         }
         .logo {
@@ -97,7 +97,7 @@
         .service-card img {
             max-width: 100%;
             border-radius: 10px;
-            height: 200px; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
+            height: auto; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
             object-fit: cover; /* ปรับรูปภาพให้พอดีกับขนาด */
         }
         .service-info {
@@ -106,9 +106,10 @@
             flex-direction: column;
             justify-content: space-between;
             text-align: center; /* จัดให้เนื้อหาอยู่กึ่งกลาง */
+            white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
         }
         .read-more {
-            background-color: #ff6f61;
+            background-color: #B4F8C8;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -197,32 +198,10 @@
         <div class="service-container">
             <div class="service-card">
                 <div class="service-image">
-                    <img src="../../img/ร้าน-2.png" alt="Grooming & Cattery">
-                </div>
-                <div class="service-info">
-                    <h3>ชื่อร้าน: PET DAYCARE</h3>
-                    <p>เวลาทำการ: หยุดวันพุธ เปิด 09.00-18.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/pet_day_care.html">อ่านเพิ่มเติม</a></button>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="../../img/ร้าน-1.png" alt="PET DAYCARE">
-                </div>
-                <div class="service-info">
-                    <h3>ชื่อร้าน: KIMFAM Grooming & Cattery</h3>
-                    <p>เวลาทำการ: หยุดวันอังคาร เปิด 10.00-20.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/kimfam.html">อ่านเพิ่มเติม</a></button>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-image">
                     <img src="../../img/ร้าน-3.png" alt="Grooming & Pet Care">
                 </div>
                 <div class="service-info">
-                    <h3>ชื่อร้าน: MoSo hotel</h3>
+                    <h3>ร้าน: MoSo hotel</h3>
                     <p>เวลาทำการ: หยุดวันเสาร์ เปิด 08.00-17.00น.</p>
                     <button class="read-more"><a href="../../pages/pet_care/moso_hotel.html">อ่านเพิ่มเติม</a></button>
                 </div>
@@ -233,31 +212,50 @@
                     <img src="../../img/ร้าน-4.png" alt="Luxury Pet Spa">
                 </div>
                 <div class="service-info">
-                    <h3>ชื่อร้าน: Pet Care</h3>
+                    <h3>ร้าน: Pet Care</h3>
                     <p>เวลาทำการ: เปิดทุกวัน 10.00-22.00น.</p>
                     <button class="read-more"><a href="../../pages/pet_care/petcare.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
-            
             <div class="service-card">
                 <div class="service-image">
-                    <img src="../../img/ร้าน-5.png" alt="Paws and Claws">
+                    <img src="../../img/ร้าน-3.png" alt="Grooming & Pet Care">
                 </div>
                 <div class="service-info">
-                    <h3>ชื่อร้าน: ไขลาน</h3>
-                    <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a></button>
+                    <h3>ร้าน: MoSo hotel</h3>
+                    <p>เวลาทำการ: หยุดวันเสาร์ เปิด 08.00-17.00น.</p>
+                    <button class="read-more"><a href="../../pages/pet_care/moso_hotel.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
             
             <div class="service-card">
                 <div class="service-image">
-                    <img src="../../img/ร้าน-6.png" alt="Puppy Playhouse">
+                    <img src="../../img/ร้าน-4.png" alt="Luxury Pet Spa">
                 </div>
                 <div class="service-info">
-                    <h3>ชื่อร้าน: PETORY</h3>
-                    <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a></button>
+                    <h3>ร้าน: Pet Care</h3>
+                    <p>เวลาทำการ: เปิดทุกวัน 10.00-22.00น.</p>
+                    <button class="read-more"><a href="../../pages/pet_care/petcare.html">อ่านเพิ่มเติม</a></button>
+                </div>
+            </div><div class="service-card">
+                <div class="service-image">
+                    <img src="../../img/ร้าน-3.png" alt="Grooming & Pet Care">
+                </div>
+                <div class="service-info">
+                    <h3>ร้าน: MoSo hotel</h3>
+                    <p>เวลาทำการ: หยุดวันเสาร์ เปิด 08.00-17.00น.</p>
+                    <button class="read-more"><a href="../../pages/pet_care/moso_hotel.html">อ่านเพิ่มเติม</a></button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="../../img/ร้าน-4.png" alt="Luxury Pet Spa">
+                </div>
+                <div class="service-info">
+                    <h3>ร้าน: Pet Care</h3>
+                    <p>เวลาทำการ: เปิดทุกวัน 10.00-22.00น.</p>
+                    <button class="read-more"><a href="../../pages/pet_care/petcare.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
         </div>

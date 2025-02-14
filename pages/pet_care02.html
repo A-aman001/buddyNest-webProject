@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+
+    <title>Buddy Nest - Pet Services</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #B7EBEA;
+            color: #210000;
+        }
+        .logo {
+            width: 100px;
+        }
+
+        header {
+            background-color: #FFE0AD;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        header .nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header .auth-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        header .auth-buttons a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header .auth-buttons button {
+            background-color: #e2f5f5;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .banner {
+            width: 100%;
+            text-align: center;
+        }
+        .banner-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .service-container {
+            display: flex;
+            gap: 20px;
+            margin: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 20px;
+        }
+        .service-card {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            height: 450px; /* กำหนดความสูงเท่ากัน */
+        }
+        .service-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            height: auto; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
+            object-fit: cover; /* ปรับรูปภาพให้พอดีกับขนาด */
+        }
+        .service-info {
+            flex: 1; /* ทำให้เนื้อหาใน .service-info เติมเต็มพื้นที่ที่เหลือ */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center; /* จัดให้เนื้อหาอยู่กึ่งกลาง */
+            white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
+        }
+        .read-more {
+            background-color: #B4F8C8;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+        }
+        .read-more:hover {
+            background-color: #e65c50;
+        }
+        footer.main-footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            background-color: #FFF7F7;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+        footer.main-footer div {
+            margin: 10px;
+            text-align: left;
+        }
+        footer.main-footer h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        footer.main-footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        footer.main-footer a {
+            text-decoration: none;
+            color: #5a5a5a;
+            font-size: 0.9rem;
+        }
+        footer.main-footer .social-media img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
+
+        footer#bottom-footer {
+          background-color: #FFD38A;
+          text-align: center;
+          padding: 10px 0;
+          font-size: 0.9rem;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            footer.main-footer {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+            footer.main-footer div {
+              margin-bottom: 20px;
+            }
+            footer.main-footer .social-media img {
+              margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../../img/โลโก้-2.png" alt="BuddyNest Logo" class="logo">
+        </div>
+        <div class="auth-buttons">
+            <a href="../../index.html">หน้าหลัก</a>
+            <a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a>
+            <a href="../../pages/sign-in.html"><button>Sign-in</button></a>
+            <a href="../../pages/registration.html"><button>Register</button></a>
+        </div>
+    </header>
+    <header>
+        <div class="banner">
+            <img src="../../img/แบนเนอร์.png" alt="BuddyNest Banner" class="banner-image">
+        </div>
+    </header>
+    
+    <section class="services">
+        <div class="service-container">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="../../img/ร้าน-5.png" alt="Paws and Claws">
+                </div>
+                <div class="service-info">
+                    <h3>ร้าน: ไขลาน</h3>
+                    <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
+                    <button class="read-more"><a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a></button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="../../img/ร้าน-6.png" alt="Puppy Playhouse">
+                </div>
+                <div class="service-info">
+                    <h3>ร้าน: PETORY</h3>
+                    <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
+                    <button class="read-more"><a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a></button>
+                </div>
+            </div>
+            <div class="service-container">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="../../img/ร้าน-5.png" alt="Paws and Claws">
+                    </div>
+                    <div class="service-info">
+                        <h3>ร้าน: ไขลาน</h3>
+                        <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
+                        <button class="read-more"><a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a></button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="../../img/ร้าน-6.png" alt="Puppy Playhouse">
+                    </div>
+                    <div class="service-info">
+                        <h3>ร้าน: PETORY</h3>
+                        <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
+                        <button class="read-more"><a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a></button>
+                    </div>
+                </div>
+                <div class="service-container">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../../img/ร้าน-5.png" alt="Paws and Claws">
+                        </div>
+                        <div class="service-info">
+                            <h3>ร้าน: ไขลาน</h3>
+                            <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
+                            <button class="read-more"><a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a></button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../../img/ร้าน-6.png" alt="Puppy Playhouse">
+                        </div>
+                        <div class="service-info">
+                            <h3>ร้าน: PETORY</h3>
+                            <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
+                            <button class="read-more"><a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a></button>
+                        </div>
+                    </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="team">
+            <h3>Team</h3>
+            <p>Hataichanok Tanaskul</p>
+            <p>Amaraporn Onkoksung</p>
+            <p>Achiraya Kewwanya</p>
+            <p>Aman Alikae</p>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Email: buddy.nest@up.ac.th</p>
+            <p>Phone Number: (+66)12-3456789</p>
+            <p>Address: 19 ตำบลเมือง อำเภอเมืองพะเยา พะเยา 56000</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="../../img/fb.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="../../img/ig.png" alt="Instagram Logo">
+            </a>
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                <img src="../../img/x.png" alt="Twitter Logo">
+            </a>
+        </div>
+        <div class="about">
+            <h3>About Us</h3>
+            <p><a href="../../index.html">หน้าหลัก</a></p>
+            <p><a href="../../pages/grab_pet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
+            <p><a href="../../pages/pet_care.html ">บริการกรูมมิ่ง</a></p>
+            <p><a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a></p>
+        </div>
+    </footer>
+
+    <footer id="bottom-footer">
+        <p>© 2025 Buddy Nest. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
