@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +22,7 @@
             background-color: #B7EBEA;
             color: #210000;
         }
+
         .logo {
             width: 100px;
         }
@@ -64,10 +66,12 @@
             cursor: pointer;
             font-size: 0.9rem;
         }
+
         .banner {
             width: 100%;
             text-align: center;
         }
+
         .banner-image {
             width: 100%;
             height: auto;
@@ -83,6 +87,7 @@
             white-space: nowrap;
             padding-bottom: 20px;
         }
+
         .service-card {
             background: #ffffff;
             padding: 15px;
@@ -92,22 +97,31 @@
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
-            height: 450px; /* กำหนดความสูงเท่ากัน */
+            height: 450px;
+            /* กำหนดความสูงเท่ากัน */
         }
+
         .service-card img {
             max-width: 100%;
             border-radius: 10px;
-            height: auto; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
-            object-fit: cover; /* ปรับรูปภาพให้พอดีกับขนาด */
+            height: auto;
+            /* กำหนดความสูงของรูปภาพให้เท่ากัน */
+            object-fit: cover;
+            /* ปรับรูปภาพให้พอดีกับขนาด */
         }
+
         .service-info {
-            flex: 1; /* ทำให้เนื้อหาใน .service-info เติมเต็มพื้นที่ที่เหลือ */
+            flex: 1;
+            /* ทำให้เนื้อหาใน .service-info เติมเต็มพื้นที่ที่เหลือ */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            text-align: center; /* จัดให้เนื้อหาอยู่กึ่งกลาง */
-            white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
+            text-align: center;
+            /* จัดให้เนื้อหาอยู่กึ่งกลาง */
+            white-space: normal;
+            /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
         }
+
         .read-more {
             background-color: #B4F8C8;
             color: white;
@@ -115,11 +129,14 @@
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+            margin-top: 10px;
+            /* เพิ่มระยะห่างด้านบน */
         }
+
         .read-more:hover {
             background-color: #e65c50;
         }
+
         footer.main-footer {
             display: flex;
             justify-content: space-around;
@@ -128,23 +145,28 @@
             padding: 40px 20px;
             flex-wrap: wrap;
         }
+
         footer.main-footer div {
             margin: 10px;
             text-align: left;
         }
+
         footer.main-footer h3 {
             margin-bottom: 10px;
             font-size: 1.2rem;
         }
+
         footer.main-footer p {
             margin: 5px 0;
             font-size: 0.9rem;
         }
+
         footer.main-footer a {
             text-decoration: none;
             color: #5a5a5a;
             font-size: 0.9rem;
         }
+
         footer.main-footer .social-media img {
             width: 30px;
             height: 30px;
@@ -152,30 +174,34 @@
         }
 
         footer#bottom-footer {
-          background-color: #FFD38A;
-          text-align: center;
-          padding: 10px 0;
-          font-size: 0.9rem;
+            background-color: #FFD38A;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
         }
+
         a {
             text-decoration: none;
         }
 
         @media screen and (max-width: 768px) {
             footer.main-footer {
-              flex-direction: column;
-              align-items: center;
-              text-align: center;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
+
             footer.main-footer div {
-              margin-bottom: 20px;
+                margin-bottom: 20px;
             }
+
             footer.main-footer .social-media img {
-              margin: 5px;
+                margin: 5px;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -193,7 +219,7 @@
             <img src="../../img/แบนเนอร์.png" alt="BuddyNest Banner" class="banner-image">
         </div>
     </header>
-    
+
     <section class="services">
         <div class="service-container">
             <div class="service-card">
@@ -206,7 +232,7 @@
                     <button class="read-more"><a href="../../pages/pet_care/moso_hotel.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-4.png" alt="Luxury Pet Spa">
@@ -227,7 +253,7 @@
                     <button class="read-more"><a href="../../pages/pet_care/moso_hotel.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-4.png" alt="Luxury Pet Spa">
@@ -237,7 +263,8 @@
                     <p>เวลาทำการ: เปิดทุกวัน 10.00-22.00น.</p>
                     <button class="read-more"><a href="../../pages/pet_care/petcare.html">อ่านเพิ่มเติม</a></button>
                 </div>
-            </div><div class="service-card">
+            </div>
+            <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-3.png" alt="Grooming & Pet Care">
                 </div>
@@ -247,7 +274,7 @@
                     <button class="read-more"><a href="../../pages/pet_care/moso_hotel.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-4.png" alt="Luxury Pet Spa">
@@ -301,4 +328,5 @@
     </footer>
 
 </body>
+
 </html>
