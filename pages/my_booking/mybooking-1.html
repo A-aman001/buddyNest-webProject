@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Meta -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Logo -->
-    <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+   <!-- Logo -->
+   <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
 
-    <!-- Title -->
-    <title>Buddy Nest - การจองของฉัน</title>
+   <!-- Title -->
+   <title>Buddy Nest - การจองของฉัน</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../assets/css/globals.css">
-    <link rel="stylesheet" href="../../assets/css/footer.css">
-
+   <!-- CSS -->
+   <link rel="stylesheet" href="../../assets/css/globals.css">
+   <link rel="stylesheet" href="../../assets/css/footer.css">
+   
     <style>
         * {
             margin: 0;
@@ -28,8 +27,7 @@
             background-color: #EA73D3;
             color: #210000;
         }
-
-        .logo {
+            .logo {
             width: 100px;
         }
 
@@ -72,11 +70,19 @@
             cursor: pointer;
             font-size: 0.9rem;
         }
-
         main {
             text-align: center;
-            margin: 2rem auto;
-            max-width: 600px;
+            margin-top: 3rem;
+        }
+
+        main img {
+            width: 300px;
+            margin-bottom: 1rem;
+        }
+
+        main h1 {
+            font-size: 1.2rem;
+            color: #555;
         }
 
         nav {
@@ -105,65 +111,19 @@
             display: block;
         }
 
-        .booking-details {
-            background-color: #fff3f3;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-
-        .booking-header h3 {
-            font-size: 1.5rem;
-            color: #d88fd8;
-            margin-bottom: 0.5rem;
-        }
-
-        .booking-content {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .booking-content img {
-            width: 150px;
-            border-radius: 10px;
-        }
-
-        .booking-info h4 {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 0.3rem;
-        }
-
-        .booking-info p {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        .booking-summary {
-            margin-top: 1rem;
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-
     </style>
 </head>
-
 <body>
-    <!-- Navbar -->
     <header>
         <div class="logo-container">
             <img src="../../img/โลโก้-2.png" alt="BuddyNest Logo" class="logo">
         </div>
         <div></div> <!-- ช่องว่างสำหรับจัดให้อยู่ขวา -->
         <div class="auth-buttons">
-            <a href="../../index.html">หน้าหลัก</a>
-            <a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a>
-            <a href="../../pages/sign-in.html"><button>Sign-in</button></a>
-            <a href="../../pages/registration.html"><button>Register</button></a>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="pages/my_booking/mybooking-1.html">การจองของฉัน</a>
+            <a href="pages/sign-in.html"><button>Sign-in</button></a>
+            <a href="pages/registration.html"><button>Register</button></a>
         </div>
     </header>
 
@@ -174,30 +134,11 @@
     </nav>
 
     <main>
-        <section class="booking-details">
-            <div class="booking-header">
-                <h3>KIMFAM</h3>
-            </div>
-            <div class="booking-content">
-                <img src="../../img/ร้าน-1.png" alt="KIMFAM Logo" class="booking-logo">
-                <div class="booking-info">
-                    <h4>แมว 1 - 4 เดือน</h4>
-                    <p>ขนยาว | ตู้อาบน้ำอัตโนมัติ</p><br>
-                    <p><strong>฿109.00</strong></p>
-                </div>
-            </div>
-            <div class="booking-summary">
-                <p>ค่าจัดส่ง:
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿20.00</span>
-                </p>
-                <p><strong>ยอดรวมสินค้า:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿129.00</strong>
-                </p>
-            </div>
-        </section>
+        <img src="../../img/รูป1.png" alt="icon">
+        <h1>ยังไม่มีการจองในส่วนนี้</h1>
     </main>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
+    
     <footer class="main-footer">
         <article class="footer-container">
             <!-- Team -->
@@ -246,5 +187,4 @@
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
 </body>
-
 </html>

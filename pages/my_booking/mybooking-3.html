@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
@@ -15,9 +14,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/globals.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
-
     <style>
-        * {
+       * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -28,8 +26,7 @@
             background-color: #EA73D3;
             color: #210000;
         }
-
-        .logo {
+            .logo {
             width: 100px;
         }
 
@@ -72,11 +69,19 @@
             cursor: pointer;
             font-size: 0.9rem;
         }
-
         main {
             text-align: center;
-            margin: 2rem auto;
-            max-width: 600px;
+            margin-top: 3rem;
+        }
+
+        main img {
+            width: 300px;
+            margin-bottom: 1rem;
+        }
+
+        main h1 {
+            font-size: 1.2rem;
+            color: #555;
         }
 
         nav {
@@ -105,53 +110,8 @@
             display: block;
         }
 
-        .booking-details {
-            background-color: #fff3f3;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-
-        .booking-header h3 {
-            font-size: 1.5rem;
-            color: #d88fd8;
-            margin-bottom: 0.5rem;
-        }
-
-        .booking-content {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .booking-content img {
-            width: 150px;
-            border-radius: 10px;
-        }
-
-        .booking-info h4 {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 0.3rem;
-        }
-
-        .booking-info p {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        .booking-summary {
-            margin-top: 1rem;
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-
     </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <header>
@@ -168,36 +128,18 @@
     </header>
 
     <nav>
-        <div class="tab active"><a href="../../pages/my_booking/mybooking-1.html">กำลังจะมาถึง</a></div>
+        <div class="tab"><a href="../../pages/my_booking/mybooking-1.html">กำลังจะมาถึง</a></div>
         <div class="tab"><a href="../../pages/my_booking/mybooking-2.html">เสร็จสมบูรณ์</a></div>
-        <div class="tab"><a href="../../pages/my_booking/mybooking-3.html">ยกเลิก</a></div>
+        <div class="tab active"><a href="../../pages/my_booking/mybooking-3.html">ยกเลิก</a></div>
     </nav>
 
     <main>
-        <section class="booking-details">
-            <div class="booking-header">
-                <h3>KIMFAM</h3>
-            </div>
-            <div class="booking-content">
-                <img src="../../img/ร้าน-1.png" alt="KIMFAM Logo" class="booking-logo">
-                <div class="booking-info">
-                    <h4>แมว 1 - 4 เดือน</h4>
-                    <p>ขนยาว | ตู้อาบน้ำอัตโนมัติ</p><br>
-                    <p><strong>฿109.00</strong></p>
-                </div>
-            </div>
-            <div class="booking-summary">
-                <p>ค่าจัดส่ง:
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿20.00</span>
-                </p>
-                <p><strong>ยอดรวมสินค้า:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿129.00</strong>
-                </p>
-            </div>
-        </section>
+        <img src="../../img/รูป1.png" alt="icon">
+        <h1>ยังไม่มีการจองที่ถูกยกเลิก</h1>
     </main>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
+    
+    
     <footer class="main-footer">
         <article class="footer-container">
             <!-- Team -->
@@ -246,5 +188,4 @@
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
 </body>
-
 </html>

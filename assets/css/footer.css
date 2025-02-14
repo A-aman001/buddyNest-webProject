@@ -3,8 +3,8 @@
 }
 
 .main-footer {
-    background-color: #F6EEE0;
-    padding: 3rem 0rem;
+    background-color: #FFF7F7;
+    padding: 2rem 4rem;
 
     .footer-container {
         max-width: 80%;
@@ -44,7 +44,7 @@
 }
 
 .bottom-footer {
-    background-color: #FFAEBC;
+    background-color: #FFD38A;
     text-align: center;
     padding: 10px 0;
     font-size: var(--text-normal);
