@@ -1,26 +1,36 @@
-.hero {
-    background-color: #FCE9CC;
+.content {
+    display: flex;
+    justify-content: center; /* จัดให้เนื้อหาอยู่กลางแนวนอน */
+    align-items: center; /* จัดให้เนื้อหาอยู่กลางแนวตั้ง */
     padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
 }
-.content li{
+
+.content li {
     background-color: #A8DADC;
-    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 80%; /* ปรับความกว้างของกล่องเนื้อหา */
+    max-width: 800px; /* จำกัดความกว้างสูงสุด */
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* จัดให้เนื้อหาเริ่มจากด้านบน */
     gap: 20px;
-} 
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเพื่อความสวยงาม */
+}
 
 .content img {
     width: 200px;
+    height: 200px; /* กำหนดความสูงให้เท่ากับความกว้างเพื่อให้รูปเป็นสี่เหลี่ยมจัตุรัส */
     border-radius: 10px;
-
+    object-fit: cover; /* ทำให้รูปภาพครอบคลุมพื้นที่โดยไม่บิดเบือน */
 }
+
+.content div {
+    flex: 1; /* ให้เนื้อหากินพื้นที่ที่เหลือ */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* ระยะห่างระหว่างเนื้อหา */
+}
+
 .button {
     background-color: #F4A261;
     border: none;
@@ -29,12 +39,16 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    align-self: flex-start; /* จัดปุ่มให้อยู่ด้านซ้ายของเนื้อหา */
 }
+
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    }
+    margin: 0; /* ลบ margin ของ <p> เพื่อให้เนื้อหาแน่นขึ้น */
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+h2 {
+    margin: 0; /* ลบ margin ของ <h2> */
+    font-size: 24px; /* เพิ่มขนาดฟอนต์ */
+    color: #333; /* เปลี่ยนสีฟอนต์ */
+}
