@@ -33,7 +33,7 @@ It is a website that offers various pet-related services, such as pet boarding, 
 |------|----------|
 | นางสาวอชิรญา เขียวกันยะ | UX/UI Developer |
 | นางสาวอมราพร อ่อนโคกสูง | UX/UI Developer |
-| นางสาวหทัยชนก ตันสกุล | UX/UI Developer |
+| นางสาวหทัยชนก ตันสกุล | Frontend Developer |
 | นายอามาน อาลีแก | Frontend Developer |
 
 ---
