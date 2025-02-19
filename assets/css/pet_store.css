@@ -39,7 +39,7 @@
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+    margin-top: auto; /* เพิ่มระยะห่างด้านบน */
 }
 .read-more:hover {
     background-color: #e65c50;
