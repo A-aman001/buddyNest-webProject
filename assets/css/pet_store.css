@@ -1,0 +1,46 @@
+.service-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 20px;
+}
+.service-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* กำหนดความสูงเท่ากัน */
+}
+.service-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto; /* กำหนดความสูงของรูปภาพให้เท่ากัน */
+    object-fit: cover; /* ปรับรูปภาพให้พอดีกับขนาด */
+    margin: auto;
+}
+.service-info {
+    flex: 1; /* ทำให้เนื้อหาใน .service-info เติมเต็มพื้นที่ที่เหลือ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* จัดให้เนื้อหาอยู่กึ่งกลาง */
+    white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
+}
+.read-more {
+    background-color: #B4F8C8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+}
+.read-more:hover {
+    background-color: #e65c50;
+}
