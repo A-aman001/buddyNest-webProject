@@ -188,22 +188,29 @@
             eyeIcon.classList.toggle('fa-eye');
             eyeIcon.classList.toggle('fa-eye-slash');
         }
-
+    
         function handleSignIn() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
             const errorMessage = document.getElementById('error-message');
-
+    
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
             if (!email || !password) {
-                errorMessage.textContent = 'Please fill in both email and password!';
+                errorMessage.textContent = 'Please fill in all fields!';
+            } else if (!emailPattern.test(email)) {
+                errorMessage.textContent = 'Invalid email format!';
+            } else if (password.length < 8) {
+                errorMessage.textContent = 'Password must be at least 8 characters!';
             } else {
-                errorMessage.textContent = '';
-                window.location.href = '../../index.html'; // เปลี่ยนเป็นหน้าหลักของคุณ
+                errorMessage.textContent = ''; // เคลียร์ข้อความ error
+                alert('Login Successful!');  // แจ้งเตือนเข้าสู่ระบบสำเร็จ
+                window.location.href = '../../index.html';  // เปลี่ยนหน้าไปที่หน้าหลัก
             }
         }
-
+    
         function goToRegister() {
-            window.location.href = '../../pages/registration.html'; // เปลี่ยนเป็นหน้าลงทะเบียนของคุณ
+            window.location.href = '../../pages/registration.html'; // เปลี่ยนหน้าไปหน้าลงทะเบียน
         }
     </script>
 
