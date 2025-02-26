@@ -25,11 +25,13 @@
             margin: 1rem 0;
 
             button {
-                padding: 10px 20px;
+                padding: 15px 20px;
                 border: none;
                 background-color: #ffe8b2;
                 border-radius: 5px;
                 cursor: pointer;
+                appearance: none; /* ป้องกันสไตล์เริ่มต้นของระบบ */
+                outline: none; /* ป้องกันเส้นขอบที่แตกต่างกัน */
             }
         }
     }
@@ -40,14 +42,15 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 5rem;
         }
 
         select {
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
+            margin: 15px;
+            padding: 15px;
+            border: 3px solid #ccc;
             border-radius: 5px;
+
         }
 
         .results {
@@ -57,8 +60,8 @@
 }
 select, button, input {
     background-color: #ffe8b2;
-    margin: 10px;
-    padding: 10px;
+    margin: 15px;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
