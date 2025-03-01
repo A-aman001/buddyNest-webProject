@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Logo -->
-    <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+    <link rel="icon" href="../../img/โลโก้-2.png" type="image/png" sizes="16x16">
 
     <!-- Title -->
     <title>Buddy Nest - การจองของฉัน</title>
 
     <!-- CSS -->
-   <link rel="stylesheet" href="../../assets/css/globals.css">
-   <link rel="stylesheet" href="../../assets/css/footer.css">
-   <link rel="stylesheet" href="../../assets/css/nav_booking.css">
-   <link rel="stylesheet" href="../../assets/css/main_booking.css">
-   <link rel="stylesheet" href="../../assets/css/head_booking.css">
-   
+    <link rel="stylesheet" href="../../assets/css/globals.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/nav_booking.css">
+    <link rel="stylesheet" href="../../assets/css/reserve_booking.css">
+    <link rel="stylesheet" href="../../assets/css/head_booking.css">
+
+    <!-- JavaScript -->
+    <script src="../../js/logo.js"></script>
 </head>
+
 <body>
     <!-- Navbar -->
     <header>
-        <div class="logo-container">
-            <img src="../../img/โลโก้-2.png" alt="BuddyNest Logo" class="logo">
-        </div>
-        <div></div> <!-- ช่องว่างสำหรับจัดให้อยู่ขวา -->
+        <section class="logo-container">
+            <img src="../../img/โลโก้-2.png" alt="BuddyNest Logo" class="logo" onclick="goHome()">
+        </section>
+        <div></div>
         <div class="auth-buttons">
             <a href="../../index.html">หน้าหลัก</a>
             <a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a>
@@ -41,15 +45,26 @@
         <div class="tab active"><a href="../../pages/my_booking/mybooking-3.html">ยกเลิก</a></div>
     </nav>
 
-    <!-- Main -->
-    <main>
+    <main id="canceledMain">
+        <!-- กรณีไม่มีการจองที่ถูกยกเลิก -->
         <section id="canceledBookingContainer">
-        <img src="../../img/รูป1.png" alt="icon">
-        <h1>ยังไม่มีการจองที่ถูกยกเลิก</h1>
+            <img src="../../img/รูป1.png" alt="icon">
+            <h1>ยังไม่มีการจองที่ถูกยกเลิก</h1>
+        </section>
+
+        <!-- แสดงข้อมูลการจองที่ถูกยกเลิก -->
+        <section class="booking-details" id="canceledSection" style="display: none;">
+            <div class="booking-header">
+                <h3>การจองที่ถูกยกเลิก</h3>
+            </div>
+            <div id="canceledBookingData">
+                <!-- ข้อมูลการจองที่ถูกยกเลิกจะแสดงที่นี่ -->
+            </div>
         </section>
     </main>
+
     <br><br><br><br><br><br><br><br><br><br><br>
-    
+
     <!-- Footer -->
     <footer class="main-footer">
         <article class="footer-container">
@@ -100,25 +115,48 @@
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // ดึงข้อมูลจาก localStorage
-        const canceledBookingData = localStorage.getItem("canceledBooking");
+        document.addEventListener("DOMContentLoaded", function () {
+            const canceledBookingData = localStorage.getItem("canceledBooking"); // ดึงข้อมูลการจองที่ถูกยกเลิก
+            const canceledContainer = document.getElementById("canceledBookingContainer");
+            const canceledSection = document.getElementById("canceledSection");
+            const canceledBookingDisplay = document.getElementById("canceledBookingData");
 
-        if (canceledBookingData) {
-            const booking = JSON.parse(canceledBookingData);
+            if (canceledBookingData) {
+                const booking = JSON.parse(canceledBookingData);
 
-            document.getElementById("canceledBookingContainer").innerHTML = `
-                <div class="booking-details">
-                    <h3>${booking.name}</h3>
-                    <img src="${booking.image}" alt="${booking.name}" class="booking-logo">
-                    <p><strong>${booking.pet}</strong></p>
-                    <p>${booking.type}</p>
-                    <p>ราคา: <strong>${booking.price}</strong></p>
-                    <p>ค่าจัดส่ง: <strong>${booking.shipping}</strong></p>
-                    <p>ยอดรวม: <strong>${booking.total}</strong></p>
-                </div>
-            `;
-        }
+                let itemsHTML = booking.items.map(item => `
+                    <div class="booking-content">
+                        <img src="../../img/ร้าน-1.png" alt="${item.shop}">
+                        <div class="booking-info">
+                            <h4>${item.shop}</h4>
+                            <p>${item.name}</p>
+                            <p><strong>ราคา:</strong> ฿${item.price}</p>
+                        </div>
+                    </div>
+                `).join("");
+
+                canceledBookingDisplay.innerHTML = `
+                    ${itemsHTML}
+                    <hr>
+                    <div class="booking-summary">
+                        <p>ส่วนลด: ฿${booking.discount}</p>
+                        <p>ค่าจัดส่ง: ฿${booking.deliveryFee}</p>
+                        <p><strong>ยอดรวม: ฿${booking.totalPrice}</strong></p>
+                    </div>
+                `;
+
+                // แสดงข้อมูลการจองที่ถูกยกเลิก
+                canceledContainer.style.display = "none";
+                canceledSection.style.display = "block";
+            } else {
+                // กรณีไม่มีการจองถูกยกเลิก
+                canceledContainer.style.display = "block";
+                canceledSection.style.display = "none";
+            }
+        });
     </script>
 </body>
+
 </html>

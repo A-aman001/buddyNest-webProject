@@ -94,8 +94,8 @@ function goBack() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('pay-btn').onclick = function () {
-        const paymentSelected = document.querySelector('.payment-options button.selected');
+    document.getElementById("pay-btn").addEventListener("click", function () {
+        const paymentSelected = document.querySelector(".payment-options button.selected");
         if (!paymentSelected) return;
 
         let targetUrl = "";
@@ -104,10 +104,33 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (paymentSelected.textContent === "บัตรเครดิต/บัตรเดบิต") {
             targetUrl = "../../pages/credit_card.html";
         } else if (paymentSelected.textContent === "เงินสด") {
-            targetUrl = "../../pages/my_booking/mybooking-0.html";
+            // ดึงข้อมูลจากหน้า Checkout
+            const bookingData = {
+                items: [
+                    {
+                        name: "ตู้อบแห้งแมวอัตโนมัติ",
+                        price: 120,
+                        shop: "KIMFAM"
+                    },
+                    {
+                        name: "แชมพู SLEEKY",
+                        price: 50,
+                        shop: "KIMFAM"
+                    }
+                ],
+                discount: 20,
+                deliveryFee: 0,
+                totalPrice: 150
+            };
+
+            // บันทึกลง Local Storage
+            localStorage.setItem("myBooking", JSON.stringify(bookingData));
+
+            // ไปที่ "การจองของฉัน"
+            targetUrl = "../../pages/my_booking/mybooking-1.html";
         }
 
         console.log("Navigating to:", targetUrl);
         window.location.href = targetUrl;
-    };
+    });
 });

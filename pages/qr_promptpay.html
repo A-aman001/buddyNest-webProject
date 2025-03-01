@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="th">
-<he <!-- Meta -->
+
+<head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,19 +18,13 @@
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
 
-    <!--JavaScript -->
+    <!-- JavaScript -->
     <script src="../../js/logo.js"></script>
-    
+
     <style>
-       
         .container {
             text-align: center;
             padding: 20px;
-        }
-
-        .container h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
         }
 
         .qr-container {
@@ -40,7 +36,7 @@
         }
 
         .qr-container img {
-            width: 300px; /* Adjust the width to make the QR code larger */
+            width: 300px;
             height: auto;
         }
 
@@ -85,6 +81,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav>
@@ -102,18 +99,18 @@
 
     <div class="container">
         <h1>QR PromptPay</h1>
-        <div class="qr-container">
+        <section class="qr-container">
             <img src="../../img/qr.png" alt="QR PromptPay">
-            <p class="amount">฿129</p>
-            <p class="name">ชื่อ: Buddy Nest จำกัด</p>
+            <p class="amount">฿<span id="totalAmount">0</span></p>
+            <p class="name">ชื่อ: <span id="shopName">ไม่ระบุ</span></p>
+
             <div class="buttons">
                 <button class="save-btn" onclick="saveQR()">บันทึก QR</button>
                 <button class="confirm-btn" onclick="confirmPayment()">ตกลง</button>
             </div>
-        </div>
-        <p class="timer">กรุณาทำรายการภายใน <span id="countdown">900</span> นาที</p>
+        </section>
+        <p class="timer">กรุณาทำรายการภายใน <span id="countdown">15:00</span> นาที</p>
     </div>
-
 
     <footer class="main-footer">
         <article class="footer-container">
@@ -163,37 +160,64 @@
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
 
-    
     <script>
+        // ดึงข้อมูลการจองจาก Local Storage
+        const bookingData = JSON.parse(localStorage.getItem("myBooking"));
+
+        if (bookingData) {
+            // อัปเดตยอดชำระ
+            document.getElementById("totalAmount").textContent = bookingData.totalPrice || "0";
+
+            // ดึงชื่อร้านจากสินค้า (เอาร้านแรก)
+            if (bookingData.items && bookingData.items.length > 0) {
+                document.getElementById("shopName").textContent = bookingData.items[0].shop;
+            } else {
+                document.getElementById("shopName").textContent = "Buddy Nest จำกัด";
+            }
+        }
         function saveQR() {
             alert('บันทึก QR สำเร็จ!');
         }
 
         function confirmPayment() {
             alert('การชำระเงินสำเร็จ!');
-            window.location.href = "../../pages/my_booking/mybooking-0.html"; // เปลี่ยนหน้าไปยังหน้าการจอง
+
+            // ตัวอย่างข้อมูลการจอง
+            const bookingData = {
+                items: [
+                    { name: "ตู้อบแห้งแมวอัตโนมัติ", price: 120, shop: "KIMFAM" },
+                    { name: "แชมพู SLEEKY", price: 50, shop: "KIMFAM" }
+                ],
+                discount: 20,
+                deliveryFee: 0,
+                totalPrice: 150
+            };
+
+            // บันทึกข้อมูลลง Local Storage
+            localStorage.setItem("myBooking", JSON.stringify(bookingData));
+
+            // เปลี่ยนเส้นทางไปยังหน้า "การจองของฉัน"
+            window.location.href = "../../pages/my_booking/mybooking-1.html";
         }
 
         // การจับเวลานับถอยหลัง
         let countdownValue = 900; // 15 นาที = 900 วินาที
         const countdownElement = document.getElementById("countdown");
 
-        const countdownInterval = setInterval(function() {
+        const countdownInterval = setInterval(function () {
             countdownValue--;
-            countdownElement.textContent = countdownValue;
 
-            // แปลงเป็นนาทีและวินาที
             let minutes = Math.floor(countdownValue / 60);
             let seconds = countdownValue % 60;
 
-            // แสดงเวลาเป็นนาที:วินาที
             countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
 
-            if (countdownValue <= 0) {
+            if (countdownValue === 0) {
                 clearInterval(countdownInterval);
                 window.location.href = "../../pages/payment/payment.html"; // เปลี่ยนหน้าไปยังหน้าชำระเงิน
             }
         }, 1000); // อัพเดตทุกๆ 1 วินาที
     </script>
 </body>
+
 </html>

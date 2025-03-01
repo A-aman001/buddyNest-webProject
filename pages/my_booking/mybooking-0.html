@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
@@ -16,62 +15,14 @@
    <link rel="stylesheet" href="../../assets/css/globals.css">
    <link rel="stylesheet" href="../../assets/css/footer.css">
    <link rel="stylesheet" href="../../assets/css/nav_booking.css">
+   <link rel="stylesheet" href="../../assets/css/main_booking.css">
    <link rel="stylesheet" href="../../assets/css/head_booking.css">
+   
+   <!--Style Css -->
+   <style>
 
-    <style> 
-        
-        main {
-            text-align: center;
-            margin: 2rem auto;
-            max-width: 600px;
-        }
-
-        .booking-details {
-            background-color: #FEFAF2;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-
-        .booking-header h3 {
-            font-size: 1.5rem;
-            color: #d88fd8;
-            margin-bottom: 0.5rem;
-        }
-
-        .booking-content {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .booking-content img {
-            width: 150px;
-            border-radius: 10px;
-        }
-
-        .booking-info h4 {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 0.3rem;
-        }
-
-        .booking-info p {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        .booking-summary {
-            margin-top: 1rem;
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-    </style>
+   </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <header>
@@ -89,43 +40,20 @@
 
     <!-- Nav Booking -->
     <nav>
-        <div class="tab active"><a href="../../pages/my_booking/mybooking-1.html">กำลังจะมาถึง</a></div>
+        <div class="tab"><a href="../../pages/my_booking/mybooking-1.html">กำลังจะมาถึง</a></div>
         <div class="tab"><a href="../../pages/my_booking/mybooking-2.html">เสร็จสมบูรณ์</a></div>
-        <div class="tab"><a href="../../pages/my_booking/mybooking-3.html">ยกเลิก</a></div>
+        <div class="tab active"><a href="../../pages/my_booking/mybooking-0.html">ยกเลิก</a></div>
     </nav>
 
     <!-- Main -->
     <main>
-        <section class="booking-details">
-            <div class="booking-header">
-                <h3>KIMFAM</h3>
-            </div>
-            <div class="booking-content">
-                <img src="../../img/ร้าน-1.png" alt="KIMFAM Logo" class="booking-logo">
-                <div class="booking-info">
-                    <h4>แมว 1 - 4 เดือน</h4>
-                    <p>ขนยาว | ตู้อาบน้ำอัตโนมัติ</p><br>
-                    <p><strong>฿109.00</strong></p>
-                </div>
-            </div>
-            <div class="booking-summary">
-                <p>ราคา: <span style="float:right;">฿109.00</span></p>
-                <p>ค่าจัดส่ง: <span style="float:right;">฿20.00</span></p>
-                <p><strong>ยอดรวมสินค้า: <span style="float:right;">฿129.00</span></strong></p>
-            </div>
-            
-            <!-- ปุ่มยกเลิกการจอง -->
-            <div style="text-align: center; margin-top: 1rem;">
-                <button id="cancelBookingButton" style="background-color: #ff4d4d; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">
-                    ยกเลิกการจอง
-                </button>
-            </div>
-            
+        <section id="canceledBookingContainer">
+        <img src="../../img/รูป1.png" alt="icon">
+        <h1>ยังไม่มีการจองที่ถูกยกเลิก</h1>
         </section>
     </main>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
+    
     <!-- Footer -->
     <footer class="main-footer">
         <article class="footer-container">
@@ -176,48 +104,5 @@
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
 
-    <script>
-    const cancelButton = document.getElementById("cancelBookingButton");
-    
-if (cancelButton) {
-    cancelButton.addEventListener("click", function () {
-        // ดึงข้อมูลการจองจาก DOM
-        const bookingDetails = {
-            name: "KIMFAM",
-            pet: "แมว 1 - 4 เดือน",
-            type: "ขนยาว | ตู้อาบน้ำอัตโนมัติ",
-            price: "฿109.00",
-            shipping: "฿20.00",
-            total: "฿129.00",
-            image: "../../img/ร้าน-1.png"
-        };
-        
-        // เก็บข้อมูลลง localStorage
-        localStorage.setItem("canceledBooking", JSON.stringify(bookingDetails));
-        
-        // เปลี่ยนหน้าไปยัง mybooking-3.html
-        window.location.href = "../../pages/my_booking/mybooking-3.html";
-    });
-}
-
-// ส่วนที่ต้องใส่ใน mybooking-3.html เพื่อนำข้อมูลมาแสดง
-const canceledBookingData = localStorage.getItem("canceledBooking");
-if (canceledBookingData) {
-    const booking = JSON.parse(canceledBookingData);
-    
-    document.getElementById("canceledBookingContainer").innerHTML = `
-        <div class="booking-details">
-            <h3>${booking.name}</h3>
-            <img src="${booking.image}" alt="${booking.name}" class="booking-logo">
-            <p><strong>${booking.pet}</strong></p>
-            <p>${booking.type}</p>
-            <p>ราคา: <strong>${booking.price}</strong></p>
-            <p>ค่าจัดส่ง: <strong>${booking.shipping}</strong></p>
-            <p>ยอดรวม: <strong>${booking.total}</strong></p>
-        </div>
-    `;
-}
-    </script>
 </body>
-
 </html>
