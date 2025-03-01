@@ -52,3 +52,8 @@ h2 {
     font-size: 24px; /* เพิ่มขนาดฟอนต์ */
     color: #333; /* เปลี่ยนสีฟอนต์ */
 }
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: var(--text-normal);
+}
