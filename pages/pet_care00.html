@@ -1,166 +1,168 @@
 <!DOCTYPE html>
 <html lang="th">
-    <head>
-        <!-- Meta -->
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-       <!-- Logo -->
-       <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
-    
-       <!-- Title -->
-       <title>Buddy Nest - Pet Services</title>
-    
-       <!-- CSS -->
-       <link rel="stylesheet" href="../../assets/css/globals.css">
-       <link rel="stylesheet" href="../../assets/css/navbar.css">
-       <link rel="stylesheet" href="../../assets/css/header.css">
-       <link rel="stylesheet" href="../../assets/css/footer.css">
-       <link rel="stylesheet" href="../../assets/css/search-1.css">
-       <link rel="stylesheet" href="../../assets/css/pet_store.css">
-    
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav>
-            <section class="logo-container">
-                <img src="../../img/โลโก้-2.png" alt="BuddyNest Logo" class="logo">
-            </section>
-            <section class="auth-buttons">
-                <a href="../../index.html">หน้าหลัก</a>
-                <a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a>
-                <a href="../../pages/sign-in.html"><button>Sign-in</button></a>
-                <a href="../../pages/registration.html"><button>Register</button></a>
-            </section>
-        </nav>
-        <!-- Header -->
-        <header>
-            <img src="../../img/แบนเนอร์.png" alt="BuddyNest Banner">
-        </header>
-    
-        <article class="search-section">
-            <div class="search-container">
-                <section class="search-category">
-                    <h4>ฉันกำลังมองหา 🔍</h4>
-                    <div class="service-buttons">
-                        <a href="../../pages/pet_care00.html"><button>ฝากเลี้ยง</button></a>
-                        <a href="../../pages/pet_care02.html"><button>ดูแลตามบ้าน</button></a>
-                        <a href="../../pages/pet_care00.html"><button>บริการกรูมมิ่ง</button></a>
-                        <a href="../pages/grab_pet.html"><button>บริการรับ-ส่งสัตว์เลี้ยง</button></a>
-                    </div>
-                </section>
-    
-                <section class="search-area">
-                    <!-- Header -->
-                    <div class="search-area-header">
-                        <h4>ค้นหาบริการสำหรับสัตว์เลี้ยงของคุณ</h4>
-                    </div>
-    
-                    <div class="search-area-container">
-                        <!-- Province -->
-                        <select id="province">
-                            <option value="">--- เลือกจังหวัด ---</option>
-                            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                            <option value="กระบี่">กระบี่</option>
-                            <option value="กาญจนบุรี">กาญจนบุรี</option>
-                            <option value="กาฬสินธุ์">กาฬสินธุ์</option>
-                            <option value="กำแพงเพชร">กำแพงเพชร</option>
-                            <option value="ขอนแก่น">ขอนแก่น</option>
-                            <option value="จันทบุรี">จันทบุรี</option>
-                            <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
-                            <option value="ชลบุรี">ชลบุรี</option>
-                            <option value="ชัยนาท">ชัยนาท</option>
-                            <option value="ชัยภูมิ">ชัยภูมิ</option>
-                            <option value="ชุมพร">ชุมพร</option>
-                            <option value="เชียงราย">เชียงราย</option>
-                            <option value="เชียงใหม่">เชียงใหม่</option>
-                            <option value="ตรัง">ตรัง</option>
-                            <option value="ตราด">ตราด</option>
-                            <option value="ตาก">ตาก</option>
-                            <option value="นครนายก">นครนายก</option>
-                            <option value="นครปฐม">นครปฐม</option>
-                            <option value="นครพนม">นครพนม</option>
-                            <option value="นครราชสีมา">นครราชสีมา</option>
-                            <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
-                            <option value="นครสวรรค์">นครสวรรค์</option>
-                            <option value="นนทบุรี">นนทบุรี</option>
-                            <option value="นราธิวาส">นราธิวาส</option>
-                            <option value="น่าน">น่าน</option>
-                            <option value="บึงกาฬ">บึงกาฬ</option>
-                            <option value="บุรีรัมย์">บุรีรัมย์</option>
-                            <option value="ปทุมธานี">ปทุมธานี</option>
-                            <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
-                            <option value="ปราจีนบุรี">ปราจีนบุรี</option>
-                            <option value="ปัตตานี">ปัตตานี</option>
-                            <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
-                            <option value="พังงา">พังงา</option>
-                            <option value="พัทลุง">พัทลุง</option>
-                            <option value="พิจิตร">พิจิตร</option>
-                            <option value="พิษณุโลก">พิษณุโลก</option>
-                            <option value="เพชรบุรี">เพชรบุรี</option>
-                            <option value="เพชรบูรณ์">เพชรบูรณ์</option>
-                            <option value="แพร่">แพร่</option>
-                            <option value="พะเยา">พะเยา</option>
-                            <option value="ภูเก็ต">ภูเก็ต</option>
-                            <option value="มหาสารคาม">มหาสารคาม</option>
-                            <option value="มุกดาหาร">มุกดาหาร</option>
-                            <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
-                            <option value="ยโสธร">ยโสธร</option>
-                            <option value="ยะลา">ยะลา</option>
-                            <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
-                            <option value="ระนอง">ระนอง</option>
-                            <option value="ระยอง">ระยอง</option>
-                            <option value="ราชบุรี">ราชบุรี</option>
-                            <option value="ลพบุรี">ลพบุรี</option>
-                            <option value="ลำปาง">ลำปาง</option>
-                            <option value="ลำพูน">ลำพูน</option>
-                            <option value="เลย">เลย</option>
-                            <option value="ศรีสะเกษ">ศรีสะเกษ</option>
-                            <option value="สกลนคร">สกลนคร</option>
-                            <option value="สงขลา">สงขลา</option>
-                            <option value="สตูล">สตูล</option>
-                            <option value="สมุทรปราการ">สมุทรปราการ</option>
-                            <option value="สมุทรสงคราม">สมุทรสงคราม</option>
-                            <option value="สมุทรสาคร">สมุทรสาคร</option>
-                            <option value="สระแก้ว">สระแก้ว</option>
-                            <option value="สระบุรี">สระบุรี</option>
-                            <option value="สิงห์บุรี">สิงห์บุรี</option>
-                            <option value="สุโขทัย">สุโขทัย</option>
-                            <option value="สุพรรณบุรี">สุพรรณบุรี</option>
-                            <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
-                            <option value="สุรินทร์">สุรินทร์</option>
-                            <option value="หนองคาย">หนองคาย</option>
-                            <option value="หนองบัวลำภู">หนองบัวลำภู</option>
-                            <option value="อ่างทอง">อ่างทอง</option>
-                            <option value="อุดรธานี">อุดรธานี</option>
-                            <option value="อุทัยธานี">อุทัยธานี</option>
-                            <option value="อุตรดิตถ์">อุตรดิตถ์</option>
-                            <option value="อุบลราชธานี">อุบลราชธานี</option>
-                            <option value="อำนาจเจริญ">อำนาจเจริญ</option>
-                        </select>
-    
-                        <!-- Pet types -->
-                        <select id="pet-type">
-                            <option value="">--- เลือกประเภทสัตว์เลี้ยง ---</option>
-                            <option value="สุนัข">สุนัข</option>
-                            <option value="แมว">แมว</option>
-                            <option value="กระต่าย">กระต่าย</option>
-                            <option value="แฮมสเตอร์">แฮมสเตอร์</option>
-                        </select>
-    
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo -->
+    <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+
+    <!-- Title -->
+    <title>Buddy Nest - Pet Services</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/globals.css">
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/search-1.css">
+    <link rel="stylesheet" href="../../assets/css/pet_store.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <section class="logo-container">
+            <img src="../../img/โลโก้-2.png" alt="BuddyNest Logo" class="logo">
+        </section>
+        <section class="auth-buttons">
+            <a href="../../index.html">หน้าหลัก</a>
+            <a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a>
+            <a href="../../pages/sign-in.html"><button>Sign-in</button></a>
+            <a href="../../pages/registration.html"><button>Register</button></a>
+        </section>
+    </nav>
+    <!-- Header -->
+    <header>
+        <img src="../../img/แบนเนอร์.png" alt="BuddyNest Banner">
+    </header>
+
+    <article class="search-section">
+        <section class="search-container">
+            <div class="search-category">
+                <h4>ฉันกำลังมองหา 🔍</h4>
+                <div class="service-buttons">
+                    <a href="../../pages/pet_care00.html"><button>ฝากเลี้ยง</button></a>
+                    <a href="../../pages/pet_care02.html"><button>ดูแลตามบ้าน</button></a>
+                    <a href="../../pages/pet_care00.html"><button>บริการกรูมมิ่ง</button></a>
+                    <a href="../pages/grab_pet.html"><button>บริการรับ-ส่งสัตว์เลี้ยง</button></a>
+                </div>
+            </div>
+
+            <section class="search-area">
+                <!-- Header -->
+                <div class="search-area-header">
+                    <h4>ค้นหาบริการสำหรับสัตว์เลี้ยงของคุณ</h4>
+                </div>
+
+                <div class="search-area-container">
+                    <!-- Province -->
+                    <select id="province">
+                        <option value="">--- เลือกจังหวัด ---</option>
+                        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                        <option value="กระบี่">กระบี่</option>
+                        <option value="กาญจนบุรี">กาญจนบุรี</option>
+                        <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+                        <option value="กำแพงเพชร">กำแพงเพชร</option>
+                        <option value="ขอนแก่น">ขอนแก่น</option>
+                        <option value="จันทบุรี">จันทบุรี</option>
+                        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+                        <option value="ชลบุรี">ชลบุรี</option>
+                        <option value="ชัยนาท">ชัยนาท</option>
+                        <option value="ชัยภูมิ">ชัยภูมิ</option>
+                        <option value="ชุมพร">ชุมพร</option>
+                        <option value="เชียงราย">เชียงราย</option>
+                        <option value="เชียงใหม่">เชียงใหม่</option>
+                        <option value="ตรัง">ตรัง</option>
+                        <option value="ตราด">ตราด</option>
+                        <option value="ตาก">ตาก</option>
+                        <option value="นครนายก">นครนายก</option>
+                        <option value="นครปฐม">นครปฐม</option>
+                        <option value="นครพนม">นครพนม</option>
+                        <option value="นครราชสีมา">นครราชสีมา</option>
+                        <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+                        <option value="นครสวรรค์">นครสวรรค์</option>
+                        <option value="นนทบุรี">นนทบุรี</option>
+                        <option value="นราธิวาส">นราธิวาส</option>
+                        <option value="น่าน">น่าน</option>
+                        <option value="บึงกาฬ">บึงกาฬ</option>
+                        <option value="บุรีรัมย์">บุรีรัมย์</option>
+                        <option value="ปทุมธานี">ปทุมธานี</option>
+                        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+                        <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+                        <option value="ปัตตานี">ปัตตานี</option>
+                        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+                        <option value="พังงา">พังงา</option>
+                        <option value="พัทลุง">พัทลุง</option>
+                        <option value="พิจิตร">พิจิตร</option>
+                        <option value="พิษณุโลก">พิษณุโลก</option>
+                        <option value="เพชรบุรี">เพชรบุรี</option>
+                        <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+                        <option value="แพร่">แพร่</option>
+                        <option value="พะเยา">พะเยา</option>
+                        <option value="ภูเก็ต">ภูเก็ต</option>
+                        <option value="มหาสารคาม">มหาสารคาม</option>
+                        <option value="มุกดาหาร">มุกดาหาร</option>
+                        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+                        <option value="ยโสธร">ยโสธร</option>
+                        <option value="ยะลา">ยะลา</option>
+                        <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+                        <option value="ระนอง">ระนอง</option>
+                        <option value="ระยอง">ระยอง</option>
+                        <option value="ราชบุรี">ราชบุรี</option>
+                        <option value="ลพบุรี">ลพบุรี</option>
+                        <option value="ลำปาง">ลำปาง</option>
+                        <option value="ลำพูน">ลำพูน</option>
+                        <option value="เลย">เลย</option>
+                        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                        <option value="สกลนคร">สกลนคร</option>
+                        <option value="สงขลา">สงขลา</option>
+                        <option value="สตูล">สตูล</option>
+                        <option value="สมุทรปราการ">สมุทรปราการ</option>
+                        <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+                        <option value="สมุทรสาคร">สมุทรสาคร</option>
+                        <option value="สระแก้ว">สระแก้ว</option>
+                        <option value="สระบุรี">สระบุรี</option>
+                        <option value="สิงห์บุรี">สิงห์บุรี</option>
+                        <option value="สุโขทัย">สุโขทัย</option>
+                        <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+                        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+                        <option value="สุรินทร์">สุรินทร์</option>
+                        <option value="หนองคาย">หนองคาย</option>
+                        <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+                        <option value="อ่างทอง">อ่างทอง</option>
+                        <option value="อุดรธานี">อุดรธานี</option>
+                        <option value="อุทัยธานี">อุทัยธานี</option>
+                        <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+                        <option value="อุบลราชธานี">อุบลราชธานี</option>
+                        <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+                    </select>
+
+                    <!-- Pet types -->
+                    <select id="pet-type">
+                        <option value="">--- เลือกประเภทสัตว์เลี้ยง ---</option>
+                        <option value="สุนัข">สุนัข</option>
+                        <option value="แมว">แมว</option>
+                        <option value="กระต่าย">กระต่าย</option>
+                        <option value="แฮมสเตอร์">แฮมสเตอร์</option>
+                    </select>
+
                     <!-- Submit button -->
                     <div class="search-area-button">
                         <button onclick="searchServices()">ค้นหา</button>
                     </div>
-                </section>
-    
+            </section>
+
             <div id="results" class="results">
                 <h4>ผลลัพธ์การค้นหา:</h4>
                 <ul id="resultsList"></ul>
             </div>
-        </div>
+            </div>
     </article>
-        
+
     <br><br>
     <!-- Services -->
     <section class="services">
@@ -172,10 +174,11 @@
                 <div class="service-info">
                     <h3>ร้าน: PET DAYCARE</h3>
                     <p>เวลาทำการ: หยุดวันพุธ เปิด 09.00-18.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/pet_day_care.html">อ่านเพิ่มเติม</a></button>
+                    <button class="read-more"><a
+                            href="../../pages/pet_care/pet_day_care.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-1.png" alt="PET DAYCARE">
@@ -185,17 +188,19 @@
                     <p>เวลาทำการ: หยุดวันอังคาร เปิด 10.00-20.00น.</p>
                     <button class="read-more"><a href="../../pages/pet_care/kimfam.html">อ่านเพิ่มเติม</a></button>
                 </div>
-            </div><div class="service-card">
+            </div>
+            <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-2.png" alt="Grooming & Cattery">
                 </div>
                 <div class="service-info">
                     <h3>ร้าน: PET DAYCARE</h3>
                     <p>เวลาทำการ: หยุดวันพุธ เปิด 09.00-18.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/pet_day_care.html">อ่านเพิ่มเติม</a></button>
+                    <button class="read-more"><a
+                            href="../../pages/pet_care/pet_day_care.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-1.png" alt="PET DAYCARE">
@@ -205,17 +210,19 @@
                     <p>เวลาทำการ: หยุดวันอังคาร เปิด 10.00-20.00น.</p>
                     <button class="read-more"><a href="../../pages/pet_care/kimfam.html">อ่านเพิ่มเติม</a></button>
                 </div>
-            </div><div class="service-card">
+            </div>
+            <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-2.png" alt="Grooming & Cattery">
                 </div>
                 <div class="service-info">
                     <h3>ร้าน: PET DAYCARE</h3>
                     <p>เวลาทำการ: หยุดวันพุธ เปิด 09.00-18.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/pet_day_care.html">อ่านเพิ่มเติม</a></button>
+                    <button class="read-more"><a
+                            href="../../pages/pet_care/pet_day_care.html">อ่านเพิ่มเติม</a></button>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-image">
                     <img src="../../img/ร้าน-1.png" alt="PET DAYCARE">
@@ -315,4 +322,5 @@
         }
     </script>
 </body>
+
 </html>
