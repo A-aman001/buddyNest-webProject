@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="../../assets/css/payment.css">
 
 </head>
+
 <body>
     <!-- Navbar -->
     <nav>
@@ -36,58 +38,74 @@
     </div>
     <article class="container">
         <section class="left">
-            <h3>รายละเอียดสินค้า</h3>
+            <strong>ที่อยู่สำหรับจัดส่ง</strong><br>
+            <div class="address">
+                <strong style="font-size: medium;">หทัยชนก ต้นสกุล</strong> (+66)12345674<br>
+                บ้านเลขที่ 122 หมู่ 2 ต.แม่กา อ.เมือง จ.พะเยา 56000<br>
+                <span class="edit-address" onclick="editAddress()">แก้ไข/เปลี่ยนที่อยู่</span>
+            </div><br>
+
+            <strong>รายละเอียดสินค้า</strong>
             <div class="product" onclick="viewDetails()">
                 <img src="../../img/ร้าน-3.png" alt="ร้านค้า" class="logo">
                 <div class="product-info">
                     <strong>MoSo hotel</strong><br>
                     แมว 1-4 เดือน - ขนยาว<br>
-                    ตู้เป่าขนอัตโนมัติ
+                    ตู้เป่าขนอัตโนมัติ&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;฿120<br>
+                    SLEEKY สลิคกี้ แชมพูบำรุงขนและผิวหนัง&emsp;&emsp;&emsp;฿50
                 </div>
             </div>
+
+            <strong>รายละเอียดการจอง</strong>
             <div class="address">
-                <strong>ค่าจัดส่ง</strong><br><br>
-                ยอดรวมสินค้า&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿129.00<br><br>
-                
-            </div>
-            <br><br>
-            <div class="address">
-                <strong>ที่อยู่สำหรับจัดส่ง</strong><br><br>
-                นางสาวหทัยชนก ต้นสกุล (+66)12345674<br>
-                บ้านเลขที่ 122 หมู่ 2 ต.แม่กา อ.เมือง จ.พะเยา 56000<br>
+                <strong
+                    style="font-size: medium;">ยอดรวมบริการ</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span
+                    id="total-service-price">฿0.00</span><br>
+                <strong
+                    style="font-size: medium;">โค้ดส่วนลดร้านค้า</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span
+                    id="discount-price">฿20.00</span><br>
+                <strong
+                    style="font-size: medium;">ค่าจัดส่ง</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<span
+                    id="delivery-price">฿0.00</span><br>
                 <br>
-                <span class="edit-address" onclick="editAddress()">แก้ไข/เปลี่ยนที่อยู่</span>
             </div>
+
         </section>
         <section class="right">
-            <h3>ตัวเลือกการจัดส่ง</h3>
+            <strong>ตัวเลือกการจัดส่ง</strong>
             <div class="delivery-options">
                 <button onclick="selectOption(this, 'delivery-options')">รับ-ส่งด้วยตัวเอง</button>
                 <button onclick="selectOption(this, 'delivery-options')">รับ-ส่งโดยร้าน</button>
             </div>
             <div class="note">
-                <strong>ข้อความถึงร้านค้า</strong>
-                <br><br>
+                <strong>หมายเหตุ</strong>
+                <br>
                 <textarea placeholder="ฝากข้อความถึงร้านค้า (ถ้ามี)"></textarea>
             </div>
-            <h3>ช่องทางการชำระเงิน</h3>
+            <strong>ช่องทางการชำระเงิน</strong>
             <div class="payment-options">
                 <button onclick="selectOption(this, 'payment-options')">QR PromptPay</button>
                 <button onclick="selectOption(this, 'payment-options')">บัตรเครดิต/บัตรเดบิต</button>
                 <button onclick="selectOption(this, 'payment-options')">เงินสด</button>
             </div>
+            <br>
+
+            <strong>ข้อมูลการชำระเงิน</strong>
             <div class="payment-summary">
-                ราคาค่าบริการ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿109<br>
-                ค่าจัดส่ง:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿20<br>
-                ส่วนลด:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿0<br>
-                ยอดชำระเงินทั้งหมด:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿129
+                รวมการบริการ&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="service-price">฿0.00</span><br>
+                การจัดส่ง&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span
+                    id="delivery-price-summary">฿0.00</span><br>
+                ส่วนลด&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span
+                    id="discount-summary">฿0.00</span><br>
+                <strong style="font-size: medium;">ยอดชำระเงินทั้งหมด:</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<span
+                    id="total-price">฿0.00</span>
             </div>
             <div class="button-container">
                 <button type="button" class="btn-cancel" onclick="goBack()">ยกเลิก</button>
                 <button id="pay-btn" class="pay-btn" disabled>ยืนยันการชำระเงิน</button>
             </div>
         </section>
-    </ฟ>
+    </article>
     <br><br>
     <footer class="main-footer">
         <article class="footer-container">
@@ -136,12 +154,12 @@
     <footer class="bottom-footer">
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
-    
+
     <script>
         function viewDetails() {
             alert("แสดงรายละเอียดสินค้า");
         }
-    
+
         function selectOption(button, group) {
             document.querySelectorAll('.' + group + ' button').forEach(btn => {
                 btn.classList.remove('selected');
@@ -149,35 +167,102 @@
             button.classList.add('selected');
             validateSelection();
         }
-    
+
         function validateSelection() {
             const paymentSelected = document.querySelector('.payment-options button.selected');
             const deliverySelected = document.querySelector('.delivery-options button.selected');
             const payBtn = document.getElementById('pay-btn');
-    
+
             payBtn.disabled = !(paymentSelected && deliverySelected);
         }
-    
+
         function editAddress() {
             alert("แก้ไขหรือเปลี่ยนที่อยู่");
         }
 
+        function selectOption(button, group) {
+            document.querySelectorAll('.' + group + ' button').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            button.classList.add('selected');
+
+            // ถ้าเป็นตัวเลือกการจัดส่ง ให้เปลี่ยนค่าจัดส่ง
+            if (group === 'delivery-options') {
+                const deliveryPriceElement = document.getElementById('delivery-price');
+                const deliverySummaryElement = document.getElementById('delivery-price-summary');
+
+                if (button.innerText === 'รับ-ส่งด้วยตัวเอง') {
+                    deliveryPriceElement.innerText = '฿0.00';
+                    deliverySummaryElement.innerText = '฿0.00';
+                } else if (button.innerText === 'รับ-ส่งโดยร้าน') {
+                    deliveryPriceElement.innerText = '฿45.00';
+                    deliverySummaryElement.innerText = '฿45.00';
+                }
+
+                // คำนวณยอดรวมใหม่
+                calculateTotal();
+            }
+
+            validateSelection();
+        }
+
+        function calculateTotal() {
+            try {
+                // ดึงราคาสินค้าจากรายละเอียดสินค้า
+                const productPrices = document.querySelectorAll('.product-info');
+                let totalServicePrice = 0;
+
+                productPrices.forEach(product => {
+                    const priceTexts = product.innerHTML.match(/฿[0-9]+/g);
+                    if (priceTexts) {
+                        priceTexts.forEach(priceText => {
+                            const priceValue = parseFloat(priceText.replace('฿', ''));
+                            if (!isNaN(priceValue)) {
+                                totalServicePrice += priceValue;
+                            }
+                        });
+                    }
+                });
+
+                // อัปเดตยอดรวมบริการใน HTML
+                document.getElementById('total-service-price').innerText = `฿${totalServicePrice.toFixed(2)}`;
+                document.getElementById('service-price').innerText = `฿${totalServicePrice.toFixed(2)}`;
+
+                // ดึงส่วนลดและค่าจัดส่งจากรายละเอียดการจอง
+                const discount = parseFloat(document.getElementById('discount-price').innerText.replace('฿', '')) || 0;
+                const deliveryPrice = parseFloat(document.getElementById('delivery-price').innerText.replace('฿', '')) || 0;
+
+                // คำนวณยอดชำระเงินทั้งหมด
+                const totalPrice = (totalServicePrice - discount) + deliveryPrice;
+
+                // แสดงผลลัพธ์ใน HTML
+                document.getElementById('discount-summary').innerText = `฿${discount.toFixed(2)}`;
+                document.getElementById('delivery-price-summary').innerText = `฿${deliveryPrice.toFixed(2)}`;
+                document.getElementById('total-price').innerText = `฿${totalPrice.toFixed(2)}`;
+            } catch (error) {
+                console.error("Error in calculateTotal:", error);
+            }
+        }
+
+        // เรียกฟังก์ชันเมื่อหน้าเว็บโหลดเสร็จ
+        window.onload = calculateTotal;
         function goBack() {
             window.history.back(); // กลับไปหน้าที่แล้ว
         }
-    
-        document.getElementById('pay-btn').onclick = function() {
+
+        document.getElementById('pay-btn').onclick = function () {
             const paymentSelected = document.querySelector('.payment-options button.selected');
             if (!paymentSelected) return;
-    
+
             if (paymentSelected.textContent === "QR PromptPay") {
-                window.location.href = "../pages/qr_promptpay.html";  
+                window.location.href = "../../pages/qr_promptpay.html";
             } else if (paymentSelected.textContent === "บัตรเครดิต/บัตรเดบิต") {
-                window.location.href = "../pages/credit_card.html";  
-            }else if (paymentSelected.textContent === "เงินสด") {
-                window.location.href = "../pages/my_booking/mybooking-0.html";  
+                window.location.href = "../../pages/credit_card.html";
+            } else if (paymentSelected.textContent === "เงินสด") {
+                window.location.href = "../../pages/my_booking/mybooking-0.html";
             }
         };
     </script>
 </body>
+
 </html>
