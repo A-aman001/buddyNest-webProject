@@ -44,3 +44,8 @@
 .read-more:hover {
     background-color: #e65c50;
 }
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: var(--text-normal);
+}
