@@ -43,8 +43,10 @@
 
     <!-- Main -->
     <main>
+        <section id="canceledBookingContainer">
         <img src="../../img/รูป1.png" alt="icon">
         <h1>ยังไม่มีการจองที่ถูกยกเลิก</h1>
+        </section>
     </main>
     <br><br><br><br><br><br><br><br><br><br><br>
     
@@ -97,5 +99,26 @@
     <footer class="bottom-footer">
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // ดึงข้อมูลจาก localStorage
+        const canceledBookingData = localStorage.getItem("canceledBooking");
+
+        if (canceledBookingData) {
+            const booking = JSON.parse(canceledBookingData);
+
+            document.getElementById("canceledBookingContainer").innerHTML = `
+                <div class="booking-details">
+                    <h3>${booking.name}</h3>
+                    <img src="${booking.image}" alt="${booking.name}" class="booking-logo">
+                    <p><strong>${booking.pet}</strong></p>
+                    <p>${booking.type}</p>
+                    <p>ราคา: <strong>${booking.price}</strong></p>
+                    <p>ค่าจัดส่ง: <strong>${booking.shipping}</strong></p>
+                    <p>ยอดรวม: <strong>${booking.total}</strong></p>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>

@@ -109,26 +109,16 @@
                 </div>
             </div>
             <div class="booking-summary">
-                <p>ค่าจัดส่ง:
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿20.00</span>
-                </p>
-                <p><strong>ยอดรวมสินค้า:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;฿129.00</strong>
-                </p>
-            </div>
-            <div class="booking-summary">
-                <p>ค่าจัดส่ง:
-                    <span style="float:right;">฿20.00</span>
-                </p>
-                <p><strong>ยอดรวมสินค้า:<span style="float:right;">฿129.00</span></strong></p>
+                <p>ราคา: <span style="float:right;">฿109.00</span></p>
+                <p>ค่าจัดส่ง: <span style="float:right;">฿20.00</span></p>
+                <p><strong>ยอดรวมสินค้า: <span style="float:right;">฿129.00</span></strong></p>
             </div>
             
             <!-- ปุ่มยกเลิกการจอง -->
             <div style="text-align: center; margin-top: 1rem;">
-                <a href="../../pages/my_booking/mybooking-3.html">
-                    <button style="background-color: #ff4d4d; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">
-                        ยกเลิกการจอง
-                    </button>
-                </a>
+                <button id="cancelBookingButton" style="background-color: #ff4d4d; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">
+                    ยกเลิกการจอง
+                </button>
             </div>
             
         </section>
@@ -185,6 +175,49 @@
     <footer class="bottom-footer">
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
+
+    <script>
+    const cancelButton = document.getElementById("cancelBookingButton");
+    
+if (cancelButton) {
+    cancelButton.addEventListener("click", function () {
+        // ดึงข้อมูลการจองจาก DOM
+        const bookingDetails = {
+            name: "KIMFAM",
+            pet: "แมว 1 - 4 เดือน",
+            type: "ขนยาว | ตู้อาบน้ำอัตโนมัติ",
+            price: "฿109.00",
+            shipping: "฿20.00",
+            total: "฿129.00",
+            image: "../../img/ร้าน-1.png"
+        };
+        
+        // เก็บข้อมูลลง localStorage
+        localStorage.setItem("canceledBooking", JSON.stringify(bookingDetails));
+        
+        // เปลี่ยนหน้าไปยัง mybooking-3.html
+        window.location.href = "../../pages/my_booking/mybooking-3.html";
+    });
+}
+
+// ส่วนที่ต้องใส่ใน mybooking-3.html เพื่อนำข้อมูลมาแสดง
+const canceledBookingData = localStorage.getItem("canceledBooking");
+if (canceledBookingData) {
+    const booking = JSON.parse(canceledBookingData);
+    
+    document.getElementById("canceledBookingContainer").innerHTML = `
+        <div class="booking-details">
+            <h3>${booking.name}</h3>
+            <img src="${booking.image}" alt="${booking.name}" class="booking-logo">
+            <p><strong>${booking.pet}</strong></p>
+            <p>${booking.type}</p>
+            <p>ราคา: <strong>${booking.price}</strong></p>
+            <p>ค่าจัดส่ง: <strong>${booking.shipping}</strong></p>
+            <p>ยอดรวม: <strong>${booking.total}</strong></p>
+        </div>
+    `;
+}
+    </script>
 </body>
 
 </html>
