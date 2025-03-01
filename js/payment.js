@@ -93,15 +93,21 @@ function goBack() {
     window.history.back(); // กลับไปหน้าที่แล้ว
 }
 
-document.getElementById('pay-btn').onclick = function () {
-    const paymentSelected = document.querySelector('.payment-options button.selected');
-    if (!paymentSelected) return;
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('pay-btn').onclick = function () {
+        const paymentSelected = document.querySelector('.payment-options button.selected');
+        if (!paymentSelected) return;
 
-    if (paymentSelected.textContent === "QR PromptPay") {
-        window.location.href = "../../pages/qr_promptpay.html";
-    } else if (paymentSelected.textContent === "บัตรเครดิต/บัตรเดบิต") {
-        window.location.href = "../../pages/credit_card.html";
-    } else if (paymentSelected.textContent === "เงินสด") {
-        window.location.href = "../../pages/my_booking/mybooking-0.html";
-    }
-};
+        let targetUrl = "";
+        if (paymentSelected.textContent === "QR PromptPay") {
+            targetUrl = "../../pages/qr_promptpay.html";
+        } else if (paymentSelected.textContent === "บัตรเครดิต/บัตรเดบิต") {
+            targetUrl = "../../pages/credit_card.html";
+        } else if (paymentSelected.textContent === "เงินสด") {
+            targetUrl = "../../pages/my_booking/mybooking-0.html";
+        }
+
+        console.log("Navigating to:", targetUrl);
+        window.location.href = targetUrl;
+    };
+});
