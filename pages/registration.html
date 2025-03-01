@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="th">
-
+ 
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
     <!-- Logo -->
     <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
-
+ 
     <!-- Title -->
     <title>Buddy Nest - Register page</title>
-
+ 
     <!-- Embedded CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+ 
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/globals.css">
-
+ 
     <style>
         body {
             background-color: #FFEED1 !important;
         }
-
+ 
         .register {
             width: 100%;
             min-height: 100vh;
             display: flex;
             flex-direction: row;
-
+ 
             .left-panel {
                 display: flex;
                 flex-direction: column;
@@ -36,26 +36,26 @@
                 align-items: center;
                 gap: 1rem;
                 width: 50%;
-
+ 
                 img {
                     max-width: 50rem;
                 }
-
+ 
                 .register-subheading {
                     font-size: 18px;
                     font-weight: normal;
                     color: #555;
                 }
             }
-
+ 
             .right-panel {
                 width: 50%;
                 background-color: #FFFFFF;
-
+ 
                 .register-form {
                     max-height: 100vh;
                     overflow-y: scroll;
-
+ 
                     .container {
                         max-width: 80%;
                         margin: 0 auto;
@@ -64,13 +64,13 @@
                         flex-direction: column;
                         gap: 1rem;
                     }
-
+ 
                     .form-group {
                         label {
                             font-weight: bold;
                             margin-bottom: 0.2rem;
                         }
-
+ 
                         input {
                             width: 100%;
                             padding: 12px;
@@ -78,63 +78,63 @@
                             border: 1px solid #ccc;
                             border-radius: 5px;
                         }
-
+ 
                         .form-label {
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
                         }
-
+ 
                         .gender-options {
                             width: auto;
                             display: flex;
                             flex-direction: row;
                             justify-content: space-evenly;
-
+ 
                             .gender-input {
                                 display: flex;
                                 align-items: center;
                                 gap: 1rem;
                             }
                         }
-
+ 
                         .form-inline {
                             width: 100%;
                             display: flex;
                             flex-direction: row;
                             gap: 1rem;
                             padding-top: 1rem;
-
+ 
                             div {
                                 width: 50%;
                             }
                         }
                     }
-
+ 
                     .terms {
                         display: flex;
                         flex-direction: row;
                         gap: 1rem;
-
+ 
                         input {
                             width: auto;
                             cursor: pointer;
                         }
-
+ 
                         label {
                             font-weight: normal;
-
+ 
                             a {
                                 color: #d9c2a7;
                                 text-decoration: none;
                             }
                         }
                     }
-
+ 
                     .actions {
                         display: flex;
                         gap: 1rem;
-
+ 
                         button {
                             width: 50%;
                             background-color: #FFD38A;
@@ -145,7 +145,7 @@
                             padding: 0.8rem;
                             border-radius: 5px;
                         }
-
+ 
                         button:hover {
                             opacity: 0.9;
                         }
@@ -155,18 +155,18 @@
         }
     </style>
 </head>
-
+ 
 <body>
-
+ 
     <article class="register">
         <!-- Left panel -->
         <section class="left-panel">
             <img src="../../img/โลโก้-1.png" alt="Buddynest Logo">
         </section>
-
+ 
         <!-- Right panel -->
         <section class="right-panel">
-            
+           
             <form id="register-form" class="register-form">
                 <div class="container">
                     <!-- Username -->
@@ -175,13 +175,13 @@
                         <label for="username">Username</label>  
                         <input type="text" id="username" placeholder="Enter username" required>
                     </section>
-
+ 
                     <!-- Email -->
                     <section class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" placeholder="example@email.com" required>
                     </section>
-
+ 
                     <!-- Password -->
                     <section class="form-group">
                         <div class="form-label">
@@ -192,8 +192,8 @@
                         </div>
                         <input type="password" id="password" placeholder="Create a password (min 8 characters)" required>
                     </section>
-
-                    <!-- Confirmp password -->
+ 
+                    <!-- Confirm password -->
                     <section class="form-group">
                         <div class="form-label">
                             <label for="confirm-password">Confirm Password</label>
@@ -204,19 +204,19 @@
                         </div>
                         <input type="password" id="confirm-password" placeholder="Confirm your password" required>
                     </section>
-
+ 
                     <!-- Phone and date of birth -->
                     <section class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="Your phone number 123-456-7890" required>
+                        <input type="tel" id="phone" placeholder="Your phone number 0123456789" required>
                     </section>
-
+ 
                     <!-- Date of birth -->
                     <section class="form-group">
                         <label for="dob">Date of Birth</label>
                         <input type="date" id="dob" required>
                     </section>
-
+ 
                     <!-- Gender -->
                     <section class="form-group">
                         <label>Gender</label>
@@ -226,13 +226,13 @@
                                 <input type="radio" id="male" name="gender" value="male" required>
                                 <label for="male">Male</label>
                             </div>
-
+ 
                             <!-- Female -->
                             <div class="gender-input">
                                 <input type="radio" id="female" name="gender" value="female">
                                 <label for="female">Female</label>
                             </div>
-
+ 
                             <!-- Others -->
                             <div class="gender-input">
                                 <input type="radio" id="other" name="gender" value="other">
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                     </section>
-
+ 
                     <!-- Address -->
                     <section class="form-group">
                         <div class="form-inline">
@@ -274,16 +274,16 @@
                             </div>
                         </div>
                     </section>
-
+ 
                     <!-- Terms -->
                     <section class="form-group terms">
                         <input type="checkbox" id="terms" required>
                         <label for="terms">By registering, you agree to the
                             <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
                         </label>
-                        
+                       
                     </section>
-
+ 
                     <!-- Reset && submit button -->
                     <section class="actions">
                         <button type="reset">Reset</button>
@@ -293,14 +293,14 @@
             </form>
         </section>
     </article>
-
+ 
     <script>
         // ฟังก์ชั่นสำหรับการเปลี่ยนรูปแบบรหัสผ่าน
         function togglePassword(fieldId, iconId) {
             const passwordField = document.getElementById(fieldId);
             const eyeIcon = document.getElementById(iconId);
             const passwordFieldType = passwordField.type;
-
+ 
             if (passwordFieldType === 'password') {
                 passwordField.type = 'text';
                 eyeIcon.classList.remove('fa-eye');
@@ -311,17 +311,49 @@
                 eyeIcon.classList.add('fa-eye');
             }
         }
-
+ 
         // เมื่อทำการกดปุ่มลงทะเบียน
-        const registerForm = getElementById("register-form")
-
+        const registerForm = document.getElementById("register-form");
+ 
         registerForm.addEventListener('submit', (event) => {
             event.preventDefault();  // ป้องกันการส่งฟอร์มแบบปกติ
-
+ 
+            // ตรวจสอบความยาวของรหัสผ่าน
+            const password = document.getElementById("password").value;
+            if (password.length < 8) {
+                alert("รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษร");
+                return;
+            }
+ 
+            // ตรวจสอบความตรงกันของรหัสผ่าน
+            const confirmPassword = document.getElementById("confirm-password").value;
+            if (password !== confirmPassword) {
+                alert("รหัสผ่านไม่ตรงกัน");
+                return;
+            }
+ 
+            // ตรวจสอบว่าเบอร์โทรศัพท์เป็นตัวเลขและมี 10 หลัก
+            const phone = document.getElementById("phone").value.trim();
+            const phonePattern = /^\d{10}$/; // ตัวเลข 10 หลักติดกัน
+            
+            if (!phonePattern.test(phone)) {
+                alert("หมายเลขโทรศัพท์ต้องเป็นตัวเลข 10 หลัก");
+                return;
+            }
+            
+            // ตรวจสอบรูปแบบของรหัสไปรษณีย์
+            const postalCode = document.getElementById("postal-code").value;
+            const postalCodePattern = /^\d{5}$/;
+            if (!postalCodePattern.test(postalCode)) {
+                alert("รหัสไปรษณีย์ต้องเป็นตัวเลข 5 หลัก");
+                return;
+            }
+ 
             // หลังจากลงทะเบียนเสร็จให้เปลี่ยนไปหน้าโฮม
-            window.location.href = '../../index.html';  // เปลี่ยนเป็น URL ของหน้าโฮมที่คุณต้องการ
+            window.location.href = '../../index.html';
         });
     </script>
 </body>
-
+ 
 </html>
+ 
