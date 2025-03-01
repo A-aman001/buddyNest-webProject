@@ -77,18 +77,47 @@
     margin-top: 10px;
     font-size: 18px;
 }
-.pay-btn {
-    background: #4caf50;
-    color: white;
-    font-size: 18px;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 10px;
+.button-container {
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    margin-top: 20px; /* ระยะห่างจากส่วนบน */
 }
+
+.btn-cancel {
+    background-color: #ff4444; /* สีพื้นหลังปุ่มยกเลิก (สีแดง) */
+    color: white; /* สีตัวอักษร */
+    border: none;
+    padding: 8px 16px; /* ปรับขนาด padding ให้เล็กลง */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px; /* ปรับขนาด font ให้เล็กลง */
+    flex: 1; /* ให้ปุ่มขยายเต็มพื้นที่ที่เหลือ */
+    text-align: center; /* จัดข้อความให้อยู่กลางปุ่ม */
+    transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์ transition */
+}
+
+.btn-cancel:hover {
+    background-color: #cc0000; /* สีเมื่อโฮเวอร์ (สีแดงเข้ม) */
+}
+
+.pay-btn {
+    background-color: #4CAF50; /* สีพื้นหลังปุ่มยืนยัน (สีเขียว) */
+    color: white; /* สีตัวอักษร */
+    border: none;
+    padding: 8px 16px; /* ปรับขนาด padding ให้เล็กลง */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px; /* ปรับขนาด font ให้เล็กลง */
+    flex: 1; /* ให้ปุ่มขยายเต็มพื้นที่ที่เหลือ */
+    text-align: center; /* จัดข้อความให้อยู่กลางปุ่ม */
+    transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์ transition */
+}
+
 .pay-btn:disabled {
-    background: gray;
+    background-color: #a5d6a7; /* สีเมื่อปุ่มถูก disabled */
     cursor: not-allowed;
+}
+
+.pay-btn:hover:not(:disabled) {
+    background-color: #45a049; /* สีเมื่อโฮเวอร์ (สีเขียวเข้ม) */
 }
