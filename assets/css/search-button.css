@@ -1,0 +1,42 @@
+.image-button-container {
+    display: flex;
+    flex-direction: row;
+    /* เรียงปุ่มในแนวนอน */
+    justify-content: center;
+    /* จัดให้ปุ่มอยู่ตรงกลาง */
+    align-items: flex-start;
+    /* จัดให้ปุ่มเริ่มจากด้านบน */
+    gap: 60px;
+    /* ระยะห่างระหว่างปุ่ม */
+    margin-top: 40px;
+}
+
+.image-button {
+    display: flex;
+    flex-direction: column;
+    /* เรียงรูปและคำอธิบายในแนวตั้ง */
+    align-items: center;
+    /* จัดให้เนื้อหาภายในปุ่มอยู่ตรงกลาง */
+    text-align: center;
+    /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+.image-button img {
+    width: 120px;
+    transition: 0.3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.image-button img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.button-description {
+    margin-top: 10px;
+    /* ระยะห่างระหว่างรูปและคำอธิบาย */
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}

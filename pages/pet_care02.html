@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <!-- Meta -->
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!-- Logo -->
-   <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
+    <!-- Logo -->
+    <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
 
-   <!-- Title -->
-   <title>Buddy Nest - Pet Services</title>
+    <!-- Title -->
+    <title>Buddy Nest - Pet Services</title>
 
-   <!-- CSS -->
-   <link rel="stylesheet" href="../../assets/css/globals.css">
-   <link rel="stylesheet" href="../../assets/css/navbar.css">
-   <link rel="stylesheet" href="../../assets/css/header.css">
-   <link rel="stylesheet" href="../../assets/css/footer.css">
-   <link rel="stylesheet" href="../../assets/css/search-1.css">
-   <link rel="stylesheet" href="../../assets/css/pet_store.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/globals.css">
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/search-button.css">
+    <link rel="stylesheet" href="../../assets/css/search-1.css">
+    <link rel="stylesheet" href="../../assets/css/pet_store.css">
+    <link rel="stylesheet" href="../../assets/css/cards.css">
 
-   <!--JavaScript -->
-   <script src="../../js/logo.js"></script>
+    <!--JavaScript -->
+    <script defer src="../../js/logo.js"></script>
+    <script defer src="../../js/search.js"></script>
+    <script defer src="../../js/cards.js"></script>
 
 </head>
+
 <body>
     <!-- Navbar -->
     <nav>
@@ -37,30 +43,18 @@
             <a href="../../pages/registration.html"><button>Register</button></a>
         </section>
     </nav>
-
     <!-- Header -->
     <header>
         <img src="../../img/แบนเนอร์.png" alt="BuddyNest Banner">
     </header>
 
     <article class="search-section">
-        <section class="search-container">
-            <section class="search-category">
-                <h4>ฉันกำลังมองหา 🔍</h4>
-                <div class="service-buttons">
-                    <a href="../../pages/pet_care01.html"><button>ฝากเลี้ยง</button></a>
-                    <a href="../../pages/pet_care02.html"><button>ดูแลตามบ้าน</button></a>
-                    <a href="../../pages/pet_care00.html"><button>บริการกรูมมิ่ง</button></a>
-                    <a href="../pages/grab_pet.html"><button>บริการรับ-ส่งสัตว์เลี้ยง</button></a>
-                </div>
-            </section>
-
+        <div class="search-container">
             <section class="search-area">
                 <!-- Header -->
                 <div class="search-area-header">
-                    <h4>ค้นหาบริการสำหรับสัตว์เลี้ยงของคุณ</h4>
+                    <h4>ฉันกำลังมองหา 🔍</h4>
                 </div>
-
                 <div class="search-area-container">
                     <!-- Province -->
                     <select id="province">
@@ -164,163 +158,132 @@
                 <ul id="resultsList"></ul>
             </div>
         </div>
+
+        <!-- ปุ่มบริการต่างๆ -->
+        <div class="image-button-container">
+            <div class="image-button">
+                <a href="../../pages/pet_care00.html">
+                    <img src="../../img/pet-5.png" alt="ปุ่มกรูมมิ่ง" style="width: 115px;">
+                </a>
+                <p class="button-description">บริการกรูมมิ่ง</p>
+            </div>
+
+            <div class="image-button">
+                <a href="../../pages/pet_care02.html">
+                    <img src="../../img/pet-6.png" alt="ปุ่มฝากเลี้ยง" style="width: 120px;">
+                </a>
+                <p class="button-description">บริการฝากเลี้ยง - ดูแลตามบ้าน</p>
+            </div>
+
+            <div class="image-button">
+                <a href="../../pages/grab_pet.html">
+                    <img src="../../img/pet-8.png" alt="ปุ่มรับส่งสัตว์" style="width: 125px;">
+                </a>
+                <p class="button-description">บริการรับ-ส่งสัตว์เลี้ยง</p>
+            </div>
+        </div>
+
     </article>
 
     <br><br>
+
     <!-- Services -->
-    <section class="services">
-        <div class="service-container">
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="../../img/ร้าน-5.png" alt="Paws and Claws">
-                </div>
-                <div class="service-info">
-                    <h3>ร้าน: ไขลาน</h3>
-                    <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a></button>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="../../img/ร้าน-6.png" alt="Puppy Playhouse">
-                </div>
-                <div class="service-info">
-                    <h3>ร้าน: PETORY</h3>
-                    <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
-                    <button class="read-more"><a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a></button>
-                </div>
-            </div>
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="../../img/ร้าน-5.png" alt="Paws and Claws">
-                    </div>
-                    <div class="service-info">
-                        <h3>ร้าน: ไขลาน</h3>
-                        <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
-                        <button class="read-more"><a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a></button>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="../../img/ร้าน-6.png" alt="Puppy Playhouse">
-                    </div>
-                    <div class="service-info">
-                        <h3>ร้าน: PETORY</h3>
-                        <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
-                        <button class="read-more"><a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a></button>
-                    </div>
-                </div>
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="../../img/ร้าน-5.png" alt="Paws and Claws">
-                        </div>
-                        <div class="service-info">
-                            <h3>ร้าน: ไขลาน</h3>
-                            <p>เวลาทำการ: หยุดวันจันทร์ เปิด 09.00-19.00น.</p>
-                            <button class="read-more"><a href="../../pages/pet_care/kailan.html">อ่านเพิ่มเติม</a></button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="../../img/ร้าน-6.png" alt="Puppy Playhouse">
-                        </div>
-                        <div class="service-info">
-                            <h3>ร้าน: PETORY</h3>
-                            <p>เวลาทำการ: เปิดทุกวัน 07.00-20.00น.</p>
-                            <button class="read-more"><a href="../../pages/pet_care/petory.html">อ่านเพิ่มเติม</a></button>
-                        </div>
-                    </div>
-        </div>
+    <section>
+        <strong style="padding: 50px;; color: #4c4848;">Pet Boarding - Home Care Services | บริการฝากเลี้ยง - ดูแลตามบ้าน</strong>
     </section>
 
-   <!-- Footer -->
-    <footer class="main-footer">
-    <article class="footer-container">
-        <!-- Team -->
-        <section class="team">
-            <h3>Team</h3>
-            <p>Hataichanok Tanaskul</p>
-            <p>Amaraporn Onkoksung</p>
-            <p>Achiraya Kewangnya</p>
-            <p>Aman Alikae</p>
-        </section>
-
-        <!-- Contact -->
-        <section class="contact">
-            <h3>Contact Us</h3>
-            <p>Email: buddy.nest@up.ac.th</p>
-            <p>Phone Number: (+66)12-3456789</p>
-            <p>Address: 19 ตำบลเมือง อำเภอเมืองพะเยา พะเยา 56000</p>
-        </section>
-
-        <!-- Social media -->
-        <section class="social-media">
-            <h3>Follow Us</h3>
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-                <img src="../../img/fb.png" alt="Facebook Logo">
+    <article class="cards">
+        <section class="card">
+            <a href="../../pages/pet_care/petcare.html">
+                <img src="../../img/ร้าน-4.png" alt="Dog Bath" style="width: 100%; border-radius: 10px;">
+                <p>ร้าน: Pet Care</p>
             </a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                <img src="../../img/ig.png" alt="Instagram Logo">
-            </a>
-            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
-                <img src="../../img/x.png" alt="Twitter Logo">
+        </section>
+        <section class="card">
+            <a href="../../pages/pet_care/kailan.html">
+                <img src="../../img/ร้าน-5.png" alt="Pet Travel" style="width: 90%; border-radius: 10px;">
+                <p>ร้าน: ไขลาน</p>
             </a>
         </section>
 
-        <!-- About -->
-        <section class="about">
-            <h3>About Us</h3>
-            <p><a href="../../index.html">หน้าหลัก</a></p>
-            <p><a href="../../pages/grab_pet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
-            <p><a href="../../pages/pet_care00.html">บริการกรูมมิ่ง</a></p>
-            <p><a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a></p>
+        <section class="card">
+            <a href="../../pages/pet_care/petory.html">
+                <img src="../../img/ร้าน-6.png" alt="Pet Travel" style="width: 100%; border-radius: 10px;">
+                <p>ร้าน : PETORY</p>
+            </a>
         </section>
+
+        <section class="card">
+            <a href="../../pages/pet_care/petcare.html">
+                <img src="../../img/ร้าน-4.png" alt="Dog Bath" style="width: 100%; border-radius: 10px;">
+                <p>ร้าน : Pet Care</p>
+            </a>
+        </section>
+        <section class="card">
+            <a href="../../pages/pet_care/kailan.html">
+                <img src="../../img/ร้าน-5.png" alt="Pet Travel" style="width: 90%; border-radius: 10px;">
+                <p>ร้าน : ไขลาน</p>
+            </a>
+        </section>
+
+        <section class="card">
+            <a href="../../pages/pet_care/petory.html">
+                <img src="../../img/ร้าน-6.png" alt="Pet Travel" style="width: 100%; border-radius: 10px;">
+                <p>ร้าน : PETORY</p>
+            </a>
+        </section>
+
     </article>
-</footer>
 
-<footer class="bottom-footer">
-    <p>© 2025 Buddy Nest. All Rights Reserved.</p>
-</footer>
 
-<script>
-    const mockData = [
-        { province: "กรุงเทพมหานคร", petType: "สุนัข", service: "บริการกรูมมิ่งสำหรับสุนัขในกรุงเทพฯ" },
-        { province: "เชียงใหม่", petType: "แมว", service: "ฝากเลี้ยงแมวในเชียงใหม่" },
-        { province: "ภูเก็ต", petType: "กระต่าย", service: "ดูแลกระต่ายรายวันในภูเก็ต" },
-        { province: "ชลบุรี", petType: "แฮมสเตอร์", service: "บริการรับส่งแฮมสเตอร์ในชลบุรี" },
-    ];
+    <br><br><br>
+    <footer class="main-footer">
+        <article class="footer-container">
+            <!-- Team -->
+            <section class="team">
+                <h3>Team</h3>
+                <p>Hataichanok Tanaskul</p>
+                <p>Amaraporn Onkoksung</p>
+                <p>Achiraya Kewangnya</p>
+                <p>Aman Alikae</p>
+            </section>
 
-    const searchServices = () => {
-        // Variables
-        const province = document.getElementById("province").value;
-        const petType = document.getElementById("pet-type").value;
-        const resultsList = document.getElementById("resultsList");
-        const resultsDiv = document.getElementById("results");
+            <!-- Contact -->
+            <section class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: buddy.nest@up.ac.th</p>
+                <p>Phone Number: (+66)12-3456789</p>
+                <p>Address: 19 ตำบลเมือง อำเภอเมืองพะเยา พะเยา 56000</p>
+            </section>
 
-        resultsList.innerHTML = "";
+            <!-- Social media -->
+            <section class="social-media">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                    <img src="../../img/fb.png" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                    <img src="../../img/ig.png" alt="Instagram Logo">
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                    <img src="../../img/x.png" alt="Twitter Logo">
+                </a>
+            </section>
 
-        const filteredResults = mockData.filter(item =>
-            (!province || item.province === province) &&
-            (!petType || item.petType === petType)
-        );
+            <!-- About -->
+            <section class="about">
+                <h3>About Us</h3>
+                <p><a href="../../index.html">หน้าหลัก</a></p>
+                <p><a href="../../pages/grab_pet.html">บริการรับส่งสัตว์เลี้ยง</a></p>
+                <p><a href="../../pages/pet_care00.html">บริการกรูมมิ่ง</a></p>
+                <p><a href="../../pages/my_booking/mybooking-1.html">การจองของฉัน</a></p>
+            </section>
+        </article>
+    </footer>
 
-        if (filteredResults.length > 0) {
-            filteredResults.forEach(item => {
-                const li = document.createElement("li");
-                li.textContent = item.service;
-                resultsList.appendChild(li);
-            });
-        } else {
-            const li = document.createElement("li");
-            li.textContent = "ไม่พบผลลัพธ์ที่ตรงกับการค้นหาของคุณ";
-            resultsList.appendChild(li);
-        }
-
-        resultsDiv.style.display = "block";
-    }
-</script>
+    <footer class="bottom-footer">
+        <p>© 2025 Buddy Nest. All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>

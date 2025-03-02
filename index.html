@@ -18,27 +18,12 @@
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/search-1.css">
+    <link rel="stylesheet" href="../../assets/css/cards.css">
 
     <!--JavaScript -->
-    <script src="../../js/logo.js"></script>
-
-    <style>
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-
-            .card {
-                background-color: #f2f2f2;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                text-align: center;
-                width: 30%;
-            }
-        }
-    </style>
+    <script defer src="../../js/logo.js"></script>
+    <script defer src="../../js/search.js"></script>
+    <script defer src="../../js/cards.js"></script>
 </head>
 
 <body>
@@ -63,22 +48,11 @@
 
     <article class="search-section">
         <div class="search-container">
-            <section class="search-category">
-                <h4>ฉันกำลังมองหา 🔍</h4>
-                <div class="service-buttons">
-                    <a href="../../pages/pet_care01.html"><button>ฝากเลี้ยง</button></a>
-                    <a href="../../pages/pet_care02.html"><button>ดูแลตามบ้าน</button></a>
-                    <a href="../../pages/pet_care00.html"><button>บริการกรูมมิ่ง</button></a>
-                    <a href="../pages/grab_pet.html"><button>บริการรับ-ส่งสัตว์เลี้ยง</button></a>
-                </div>
-            </section>
-
             <section class="search-area">
                 <!-- Header -->
                 <div class="search-area-header">
-                    <h4>ค้นหาบริการสำหรับสัตว์เลี้ยงของคุณ</h4>
+                    <h4>ฉันกำลังมองหา 🔍</h4>
                 </div>
-
                 <div class="search-area-container">
                     <!-- Province -->
                     <select id="province">
@@ -182,21 +156,38 @@
                 <ul id="resultsList"></ul>
             </div>
         </div>
-        </div>
+
+
     </article>
+    
+    <br>
+    <section>
+        <strong style="padding: 50px;; color: #4c4848;">Services | บริการต่างๆ</strong>
+    </section>
 
     <article class="cards">
         <section class="card">
-            <img src="../../img/โลโก้-3.png" alt="Dog Bath" style="width: 100%; border-radius: 10px;">
+            <a href="../../pages/pet_care00.html">
+                <img src="../../img/pet-4.png" alt="Dog Bath" style="width: 80%; border-radius: 10px;">
+                <p>บริการกรูมมิ่ง</p>
+            </a>
         </section>
         <section class="card">
-            <img src="../../img/โลโก้-5.png" alt="Cat Care" style="width: 100%; border-radius: 10px;">
+            <a href="../../pages/pet_care02.html">
+                <img src="../../img/pet-3.png" alt="Pet Travel" style="width: 100%; border-radius: 10px;">
+                <p>บริการฝากเลี้ยง - ดูแลตามบ้าน</p>
+            </a>
         </section>
+
         <section class="card">
-            <img src="../../img/โลโก้-4.png" alt="Pet Travel" style="width: 100%; border-radius: 10px;">
+            <a href="../../pages/grab_pet.html">
+                <img src="../../img/pet-1.png" alt="Pet Travel" style="width: 100%; border-radius: 10px;">
+                <p>บริการรับ-ส่งสัตว์เลี้ยง</p>
+            </a>
         </section>
     </article>
 
+    <br><br><br>
     <footer class="main-footer">
         <article class="footer-container">
             <!-- Team -->
@@ -243,45 +234,10 @@
 
     <footer class="bottom-footer">
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
+
     </footer>
 
-    <script>
-        const mockData = [
-            { province: "กรุงเทพมหานคร", petType: "สุนัข", service: "บริการกรูมมิ่งสำหรับสุนัขในกรุงเทพฯ" },
-            { province: "เชียงใหม่", petType: "แมว", service: "ฝากเลี้ยงแมวในเชียงใหม่" },
-            { province: "ภูเก็ต", petType: "กระต่าย", service: "ดูแลกระต่ายรายวันในภูเก็ต" },
-            { province: "ชลบุรี", petType: "แฮมสเตอร์", service: "บริการรับส่งแฮมสเตอร์ในชลบุรี" },
-        ];
 
-        const searchServices = () => {
-            // Variables
-            const province = document.getElementById("province").value;
-            const petType = document.getElementById("pet-type").value;
-            const resultsList = document.getElementById("resultsList");
-            const resultsDiv = document.getElementById("results");
-
-            resultsList.innerHTML = "";
-
-            const filteredResults = mockData.filter(item =>
-                (!province || item.province === province) &&
-                (!petType || item.petType === petType)
-            );
-
-            if (filteredResults.length > 0) {
-                filteredResults.forEach(item => {
-                    const li = document.createElement("li");
-                    li.textContent = item.service;
-                    resultsList.appendChild(li);
-                });
-            } else {
-                const li = document.createElement("li");
-                li.textContent = "ไม่พบผลลัพธ์ที่ตรงกับการค้นหาของคุณ";
-                resultsList.appendChild(li);
-            }
-
-            resultsDiv.style.display = "block";
-        }
-    </script>
 </body>
 
 </html>
