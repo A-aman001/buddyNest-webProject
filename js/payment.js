@@ -1,8 +1,3 @@
-
-function viewDetails() {
-    alert("แสดงรายละเอียดสินค้า");
-}
-
 function selectOption(button, group) {
     document.querySelectorAll('.' + group + ' button').forEach(btn => {
         btn.classList.remove('selected');

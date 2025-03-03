@@ -1,0 +1,138 @@
+.content {
+    display: flex;
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่กลางแนวนอน */
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่กลางแนวตั้ง */
+    padding: 20px;
+}
+
+.content li {
+    background-color: #A8DADC;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* ปรับความกว้างของกล่องเนื้อหา */
+    max-width: 800px;
+    /* จำกัดความกว้างสูงสุด */
+    display: flex;
+    align-items: flex-start;
+    /* จัดให้เนื้อหาเริ่มจากด้านบน */
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาเพื่อความสวยงาม */
+}
+
+.content img {
+    width: 200px;
+    height: 200px;
+    /* กำหนดความสูงให้เท่ากับความกว้างเพื่อให้รูปเป็นสี่เหลี่ยมจัตุรัส */
+    border-radius: 10px;
+    object-fit: cover;
+    /* ทำให้รูปภาพครอบคลุมพื้นที่โดยไม่บิดเบือน */
+}
+
+.content div {
+    flex: 1;
+    /* ให้เนื้อหากินพื้นที่ที่เหลือ */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* ระยะห่างระหว่างเนื้อหา */
+}
+
+
+p {
+    margin: 0;
+    /* ลบ margin ของ <p> เพื่อให้เนื้อหาแน่นขึ้น */
+    line-height: 1;
+    /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+h2 {
+    margin: 0;
+    /* ลบ margin ของ <h2> */
+    font-size: 24px;
+    /* เพิ่มขนาดฟอนต์ */
+    color: #333;
+    /* เปลี่ยนสีฟอนต์ */
+}
+
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: var(--text-normal);
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff7f50;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.content {
+    text-align: left;
+    flex-grow: 1;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.addons {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .addon {
+        display: flex;
+        align-items: center;
+        gap: 10%;
+    }
+}
+
+
+h3 {
+    margin-top: 20px;
+    color: #ff4500;
+}
+
+button {
+    background: #32cd32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2e8b57;
+}

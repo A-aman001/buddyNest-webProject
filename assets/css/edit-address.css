@@ -1,0 +1,102 @@
+/* ซ่อน Modal ไว้ก่อน */
+.modal {
+    display: none;
+    /* ทำให้ Modal ไม่แสดงตอนเริ่มต้น */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* เนื้อหา Modal */
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+
+    /* จัดตำแหน่งให้อยู่ตรงกลางจอ */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ปุ่มปิด Modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.close:hover {
+    color: #d32f2f;
+}
+
+/* ส่วนหัว Modal */
+.modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* ป้ายกำกับฟอร์ม */
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    width: 100%;
+}
+
+/* ช่องป้อนข้อมูล */
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* ปุ่ม */
+.modal-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+/* เพิ่มแอนิเมชัน */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

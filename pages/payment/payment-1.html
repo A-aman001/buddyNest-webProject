@@ -17,10 +17,15 @@
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/payment.css">
+    <link rel="stylesheet" href="../../assets/css/edit-address.css">
+    <link rel="stylesheet" href="../../assets/css/product.css">
 
     <!--JavaScript -->
     <script src="../../js/logo.js"></script>
     <script src="../../js/payment.js"></script>
+    <script src="../../js/edit-address.js"></script>
+    <script src="../../js/product.js"></script>
+
 
 </head>
 
@@ -59,6 +64,40 @@
                 </div>
             </div>
 
+            <!-- Modal แสดงรายละเอียดร้าน -->
+            <div id="productModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+
+                    <div class="modal-body">
+                        <!-- ซ้าย: ข้อมูลร้าน -->
+                        <section class="shop-info">
+                            <h2 id="shopName"></h2>
+                            <img id="shopLogo" src="" alt="Shop Logo" class="shop-logo">
+
+                            <h3>รายละเอียดการจอง</h3>
+                            <p><strong>สัตว์เลี้ยง:</strong> <span id="petType"></span></p>
+                            <p><strong>บริการที่เลือก:</strong> <span id="serviceType"></span></p>
+                            <p><strong>ราคา:</strong> ฿<span id="servicePrice"></span></p>
+                        </section>
+
+                        <!-- ขวา: เลือกวัน/เวลา & แผนที่ -->
+                        <section class="booking-info">
+                            <label for="bookingDate">เลือกวันที่จอง:</label>
+                            <input type="date" id="bookingDate">
+
+                            <label for="bookingTime">เลือกเวลา:</label>
+                            <input type="time" id="bookingTime">
+
+                            <h3>ที่ตั้งร้าน</h3>
+                            <div id="map"></div>
+
+                            <button onclick="saveBooking()">บันทึกการเปลี่ยนแปลง</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
             <strong>รายละเอียดการจอง</strong>
             <div class="address">
                 <strong
@@ -86,7 +125,7 @@
                 <br>
                 <textarea placeholder="ฝากข้อความถึงร้านค้า (ถ้ามี)"></textarea>
             </div>
-            
+
             <strong>ช่องทางการชำระเงิน</strong>
             <div class="payment-options">
                 <button onclick="selectOption(this, 'payment-options')">QR PromptPay</button>
@@ -160,7 +199,24 @@
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
 
-    
+    <div id="editAddressModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>แก้ไขที่อยู่</h2>
+            <label>ชื่อ-นามสกุล:</label>
+            <input type="text" id="edit-name" value="หทัยชนก ต้นสกุล">
+
+            <label>เบอร์โทรศัพท์:</label>
+            <input type="text" id="edit-phone" value="+66 12345674">
+
+            <label>ที่อยู่:</label>
+            <textarea id="edit-address">บ้านเลขที่ 122 หมู่ 2 ต.แม่กา อ.เมือง จ.พะเยา 56000</textarea>
+
+            <button onclick="saveAddress()">บันทึก</button>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

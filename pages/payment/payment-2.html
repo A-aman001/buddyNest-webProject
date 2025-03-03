@@ -18,10 +18,12 @@
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/payment.css">
+    <link rel="stylesheet" href="../../assets/css/edit-address.css">
 
     <!--JavaScript -->
     <script src="../../js/logo.js"></script>
     <script src="../../js/payment.js"></script>
+    <script src="../../js/edit-address.js"></script>
 
 </head>
 
@@ -160,6 +162,22 @@
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
     </footer>
 
+    <div id="editAddressModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>แก้ไขที่อยู่</h2>
+            <label>ชื่อ-นามสกุล:</label>
+            <input type="text" id="edit-name" value="หทัยชนก ต้นสกุล">
+
+            <label>เบอร์โทรศัพท์:</label>
+            <input type="text" id="edit-phone" value="+66 12345674">
+
+            <label>ที่อยู่:</label>
+            <textarea id="edit-address">บ้านเลขที่ 122 หมู่ 2 ต.แม่กา อ.เมือง จ.พะเยา 56000</textarea>
+
+            <button onclick="saveAddress()">บันทึก</button>
+        </div>
+    </div>
 
 </body>
 
