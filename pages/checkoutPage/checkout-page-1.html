@@ -8,28 +8,24 @@
 
     <!-- Logo -->
     <link rel="icon" href="../../img/โลโก้-2.png" type="image/icon type" sizes="16x16">
-
     <!-- Title -->
-    <title>Buddy Nest - Home page</title>
+    <title>Buddy Nest - Checkout Page</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/globals.css">
     <link rel="stylesheet" href="../../assets/css/navbar.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
-    <link rel="stylesheet" href="../../assets/css/search-1.css">
-    <link rel="stylesheet" href="../../assets/css/cards.css">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-    <link rel="stylesheet" href="../../assets/css/pet_care.css">
+    <link rel="stylesheet" href="../../assets/css/payment.css">
+    
 
     <!--JavaScript -->
-    <script defer src="../../js/logo.js"></script>
-    <script defer src="../../js/search.js"></script>
-    <script defer src="../../js/script.js"></script>
+    <script src="../../js/logo.js"></script>
+    <script src="../../js/payment.js"></script>
+    <script defer src="../../js/checkout-page.js"></script>
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav>
         <section class="logo-container">
@@ -43,30 +39,41 @@
             <a href="../../pages/registration.html"><button>Register</button></a>
         </section>
     </nav>
-
-    <!-- Header -->
-    <header>
-        <img src="../../img/แบนเนอร์.png" alt="BuddyNest Banner">
-    </header>
-
     <br>
 
-    <!-- content -->
-    <ul class="content">
-        <li>
-            <img src="../../img/ร้าน-5.png" alt="Kimfam Grooming">
-            <div>
-                <h2>ร้าน : ไขลาน</h2>
-                <div class="content">
-                    <label>เลือกบริการ:</label>
+    <article class="container">
+        <section class="left">
+
+            <strong> รายละเอียดการจอง </strong><br>
+            <div class="product">
+                <img src="../../img/ร้าน-1.png" alt="ร้านค้า" class="logo">
+                <div class="product-info">
+                    <strong>ร้าน KIMFAM</strong><br>
+                    <strong style="font-size: medium; color: gray;">เลือกเวลาทำการจอง</strong><br>
+
+                    <label for="bookingDate">เลือกวันที่จอง:</label>&emsp;&emsp;&emsp;
+                    <input type="date" id="bookingDate">
+
+                    <br>
+                    <label for="bookingTime">เลือกเวลา:</label>&emsp;&emsp;&emsp;&emsp;&ensp;
+                    <input type="time" id="bookingTime">
+
+                </div>
+            </div>
+
+            <strong> เลือกรายการที่ต้องการจอง </strong><br>
+            <div class="product">
+
+                <div class="product-info">
+                    <label>เลือกบริการ</label>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;
                     <select id="service">
                         <option value="0">-- เลือกบริการ --</option>
                         <option value="80">อาบน้ำ (80.-)</option>
                         <option value="99">ตัดขน (99.-)</option>
                         <option value="50">ทำความสะอาดหู (50.-)</option>
-                    </select>
+                    </select> <br>
 
-                    <label>ประเภทสัตว์เลี้ยง:</label>
+                    <label>เลือกประเภทสัตว์เลี้ยง</label>&nbsp;&nbsp;&nbsp;&nbsp;
                     <select id="pet-type">
                         <option value="0">-- เลือกประเภท --</option>
                         <option value="80">แมวขนสั้น (1-4 เดือน) - 80.-</option>
@@ -76,27 +83,58 @@
                         <option value="100">หมาขนาดเล็ก - 100.-</option>
                         <option value="150">หมาขนาดกลาง - 150.-</option>
                         <option value="200">หมาขนาดใหญ่ - 200.-</option>
-                    </select>
-
+                    </select> <br>
                     <section class="addons">
-                        <label>ตัวเลือกเสริม:</label>
+                        <label>บริการเสริม :</label> <br>
                         <input type="checkbox" value="20" class="addon"> หยอดไรหู (+20.-)
                         <input type="checkbox" value="50" class="addon"> หยอดเห็บหมัด (+50.-)
-                        <input type="checkbox" value="20" class="addon"> ตัดขนอุ้งเท้า (+20.-)
+                        <input type="checkbox" value="20" class="addon"> ตัดขนอุ้งเท้า (+20.-) <br>
+                        <input type="checkbox" value="80" class="addon"> สปาสัตว์เลี้ยง (+80.-)
+                        <input type="checkbox" value="10" class="addon"> แชมพูสูตรอ่อนโยนสำหรับผิวแพ้ง่าย (+10.-) <br>
+                        <input type="checkbox" value="10" class="addon"> แชมพูป้องกันขนร่วง (+10.-)
+                        <input type="checkbox" value="10" class="addon"> แชมพูกำจัดเห็บหมัด (+10.-) <br>
+                        <input type="checkbox" value="10" class="addon"> แชมพูรักษาโรคผิวหนัง (+10.-)
+                        <input type="checkbox" value="10" class="addon"> แชมพูเน้นขนขาว (+10.-) <br>
+                        <input type="checkbox" value="10" class="addon"> แชมพูผสมครีมนวดเพื่อปรับสภาพขนให้นุ่มนวล
+                        (+10.-)
+
                     </section>
-
-
-                    <h3>รวม: <span id="total">0</span> บาท</h3>
-                    <button onclick="goToPayment()">ไปหน้าชำระเงิน</button>
                 </div>
+
             </div>
-        </li>
-    </ul>
-
+            <strong>โค้ดส่วนลดร้านค้า</strong>
+            <div class="address">
+    <strong style="font-size: medium;">โค้ดส่วนลดร้านค้า</strong>
     <br>
+    <input type="text" id="discount-code" placeholder="กรอกโค้ดส่วนลด">
+    <button onclick="applyDiscount()">ใช้โค้ด</button>
+    <br><br>
+    <span id="discount-message" style="color: green;"></span>
+    <br>
+    ส่วนลด: <span id="discount-price">฿0.00</span>
+</div>
 
+        </section>
 
+        <section class="right">
+            <div class="note">
+                <strong>หมายเหตุ</strong>
+                <br>
+                <textarea placeholder="ฝากข้อความถึงร้านค้า (ถ้ามี)"></textarea>
+            </div>
 
+            <strong>ยอดรวมบริการทั้งหมด</strong>
+            <div class="payment-summary">
+                รวมการบริการ&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="service-price">฿0.00</span><br>
+                <strong style="font-size: medium;">ยอดรวมบริการทั้งหมด</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;<span
+                    id="total-price">฿0.00</span>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn-cancel" onclick="goBack()">ยกเลิก</button>
+                <button onclick="goToPayment()" class="pay-btn">ชำระเงิน</button><br>
+            </div>
+        </section>
+    </article>
     <br><br><br>
     <footer class="main-footer">
         <article class="footer-container">
@@ -144,9 +182,7 @@
 
     <footer class="bottom-footer">
         <p>© 2025 Buddy Nest. All Rights Reserved.</p>
-
     </footer>
-
 </body>
 
 </html>
