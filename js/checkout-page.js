@@ -70,7 +70,7 @@ function validateForm() {
 // ฟังก์ชันไปยังหน้าชำระเงิน
 function goToPayment() {
     if (validateForm()) {
-        window.location.href = "../../pages/payment/payment-1.html";
+        window.location.href = "../../pages/payment/payment.html";
     }
 }
 
