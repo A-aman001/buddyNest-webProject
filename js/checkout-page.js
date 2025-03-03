@@ -11,7 +11,7 @@ function applyDiscount() {
         "DISCOUNT10": 10, // ส่วนลด 10 บาท
         "DISCOUNT20": 20, // ส่วนลด 20 บาท
         "FREESHIP": 50,   // ส่วนลด 50 บาท
-        "Gift": 200, // // ส่วนลด 200 บาท
+        "Gift": 200, // // ส่วนลด 50 บาท
     };
 
     if (validDiscountCodes[discountCode]) {
