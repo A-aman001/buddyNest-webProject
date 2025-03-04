@@ -34,7 +34,7 @@ It is a website that offers various pet-related services, such as pet boarding, 
 | นายอามาน อาลีแก | Frontend Developer |
 
 ---
-**ลิงก์githup สำหรับแอดมิน** - https://github.com/A-aman001/buddyNest-admin.git
+**ลิงก์githup สำหรับแอดมิน** - https://github.com/A-aman001/buddyNest-admin.git <br>
 **ลิงก์เว็บไซต์สำหรับแอดมิน** - https://buddy-nest-adminweb.vercel.app/
 
 > **Buddy Nest** - เพราะสัตว์เลี้ยงของคุณคือครอบครัว 🐾
